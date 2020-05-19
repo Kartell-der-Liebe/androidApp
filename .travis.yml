@@ -24,4 +24,5 @@ android:
 before_script:
     # Prepare pre-accepted licenses to not be promted at installation
 script:
+    - cd src/
     - ./gradle build check
