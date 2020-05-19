@@ -24,4 +24,4 @@ android:
 before_script:
     # Prepare pre-accepted licenses to not be promted at installation
 script:
-    - echo "Hallo Welt"
+    - ./gradle build check
