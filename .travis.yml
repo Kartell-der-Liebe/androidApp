@@ -24,4 +24,5 @@ android:
     - sys-img-armeabi-v7a-android-17
 # Emulator Management: Create, Start and Wait
 scrit:
+  - cd src/
   - ./gradlew build connectedCheck
