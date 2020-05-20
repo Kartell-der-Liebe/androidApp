@@ -44,4 +44,4 @@ before_script:
   - adb shell input keyevent 82 &
 script:
   - cd src/
-  - ./gradlew build check
+  - ./gradlew build connectedCheck
