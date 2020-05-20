@@ -45,3 +45,4 @@ before_script:
 script:
   - cd src/
   - ./gradlew build connectedCheck
+  - ./gradlew build check
