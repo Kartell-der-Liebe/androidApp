@@ -1,0 +1,534 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[a4paper,12pt,
+headsepline,           % Linie zw. Kopfzeile und Text
+oneside,               % zweiseitig
+pointlessnumbers,      % keine Punkte nach den letzten Ziffern in Überschriften
+bibtotoc,              % LV im IV
+%DIV=15,               % Satzspiegel auf 15er Raster, schmalere Ränder   
+BCOR15mm               % Bindekorrektur
+%,draft
+]{scrbook}
+\KOMAoptions{DIV=last} % Neuberechnung Satzspiegel nach Laden von Paket helvet
+
+\pagestyle{headings}
+\usepackage{blindtext}
+
+% für Texte in deutscher Sprache
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Helvetica als Standard-Dokumentschrift
+\usepackage[scaled]{helvet}
+%\usepackage{mathptmx}
+\renewcommand{\familydefault}{\sfdefault} 
+
+\usepackage{graphicx}
+
+% Literaturverzeichnis mit BibLKaTeX
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage[backend=bibtex8]{biblatex}
+\bibliography{bibliography}
+
+% Für Tabellen mit fester Gesamtbreite und variabler Spaltenbreite
+\usepackage{tabularx} 
+
+% Besondere Schriftauszeichnungen
+\usepackage{url}              % \url{http://...} in Schreibmaschinenschrift
+\usepackage{color}            % zum Setzen farbigen Textes
+
+\usepackage{amssymb, amsmath} % Pakete für Mathe-Umgebungen und -Symbole
+
+\usepackage{setspace}         % Paket für div. Abstände, z.B. ZA
+%\onehalfspacing              % nur dann, wenn gefordert; ist sehr groß!!
+\setlength{\parindent}{0pt}   % kein linker Einzug der ersten Absatzzeile
+\setlength{\parskip}{1.4ex plus 0.35ex minus 0.3ex} % Absatzabstand, leicht variabel
+
+% Tiefe, bis zu der Überschriften in das Inhaltsverzeichnis kommen
+\setcounter{tocdepth}{3}      % ist Standard
+
+% Beispiele für Quellcode
+\usepackage{listings}
+\lstset{language=Java,
+  showstringspaces=false,
+  frame=single,
+  numbers=left,
+  basicstyle=\ttfamily,
+  numberstyle=\tiny}
+
+%\usepackage[printonlyused, withpage]{acronym}
+\usepackage[printonlyused]{acronym}
+\usepackage{comment}
+\usepackage{longtable}
+%\usepackage[maxdepth=8, mark]{gitinfo2}
+\usepackage{bytefield}
+\usepackage{smartdiagram}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{hypcap}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage[outline]{contour}
+\usepackage{varwidth}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc,positioning,shapes,decorations.pathreplacing, matrix, backgrounds, fit}
+\pgfdeclarelayer{background1}
+\pgfdeclarelayer{background2}
+\pgfsetlayers{background2,background1,main}
+\definecolor{left} {HTML}{001528}
+\definecolor{navi} {HTML} {006666}
+
+\begin{document}
+
+\tikzstyle{bigbox}=[draw, inner sep=15pt]
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[
+    font=\sffamily,line width=1pt]
+    \node[bigbox, rounded corners, very thick, minimum height=600, minimum width=\textwidth] at (0,0) {};
+    \node[inner sep=0pt, rounded corners] () at (-0,8.9)
+    {\includegraphics[scale=0.46, trim={0 1150 0 250, width=\textwidth}, clip]{background.jpeg}};
+    \draw[white, very thick] (-7, 10) -- (-6, 10);
+    \draw[white, very thick] (-7, 9.8) -- (-6, 9.8);
+    \draw[white, very thick] (-7, 9.6) -- (-6, 9.6);
+    \node[rounded corners, draw, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,6.4){\Huge{\textbf{WW:DD:HH:MM:SS}}};
+    \node[rounded corners, minimum width=\textwidth, text=white,  minimum height=455, left color=left, right color=left!1!yellow] at (0,-2.5) {\Large
+    {\begin{varwidth}{\linewidth}\begin{itemize}
+        \item[] \textcolor{white}{Sturmwarunungen}
+        \item[] \textcolor{white}{Wetter}
+        \item[] \textcolor{white}{Events auf dem Festivalgelände}
+        \item[] \textcolor{white}{\dots}
+    \end{itemize}\end{varwidth}}};
+    \end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+  font=\sffamily,line width=1pt]
+  \node[bigbox, rounded corners, very thick, minimum height=600, minimum width=\textwidth] at (0,0) {};
+  \node[inner sep=0pt, rounded corners] () at (-0,8.9)
+  {\includegraphics[scale=0.46, trim={0 1150 0 250, width=\textwidth}, clip]{background.jpeg}};
+  \draw[white, very thick] (-7, 10) -- (-6, 10);
+  \draw[white, very thick] (-7, 9.8) -- (-6, 9.8);
+  \draw[white, very thick] (-7, 9.6) -- (-6, 9.6);
+  \node[rounded corners, draw, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,6.4){\Huge{\textbf{WW:DD:HH:MM:SS}}};
+  \node[rounded corners, minimum width=\textwidth, text=white,  minimum height=455, left color=left, right color=left!1!yellow] at (0,-2.5) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{white}{Sturmwarunungen}
+      \item[] \textcolor{white}{Wetter}
+      \item[] \textcolor{white}{Events auf dem Festivalgelände}
+      \item[] \textcolor{white}{\dots}
+  \end{itemize}\end{varwidth}}};
+  \node[rounded corners, draw, minimum width=5cm, minimum height=600, fill=navi] at (-4.78,0) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{yellow}{\textbf{\huge{Acts}}}
+      \item[] \textcolor{yellow}{Line Up}
+      \item[] \textcolor{yellow}{Info} 
+      \item[] \textcolor{yellow}{News}
+      \item[] \textcolor{yellow}{Essen}
+      \item[] \textcolor{yellow}{Karte}
+  \end{itemize}\end{varwidth}}};
+  \end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+  font=\sffamily,line width=1pt]
+  \node[bigbox, rounded corners, very thick, minimum height=600, minimum width=\textwidth] at (0,0) {};
+  \node[inner sep=0pt, rounded corners] () at (-0,8.9)
+  {\includegraphics[scale=0.46, trim={0 1150 0 250, width=\textwidth}, clip]{background.jpeg}};
+  \draw[white, very thick] (-7, 10) -- (-6, 10);
+  \draw[white, very thick] (-7, 9.8) -- (-6, 9.8);
+  \draw[white, very thick] (-7, 9.6) -- (-6, 9.6);
+  \node[rounded corners, draw, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,6.4){\Huge{\textbf{ACTS}}};
+  \node[rounded corners, minimum width=\textwidth, text=white,  minimum height=455, left color=left, right color=left!1!yellow] at (0,-2.5) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{white}{Act A}
+      \item[] \begin{itemize}
+        \item[] \textcolor{white}{Youtube Link}
+        \item[] \textcolor{white}{Facebook Link}
+        \item[] \textcolor{white}{Instagram Link}
+        \item[] \textcolor{white}{\dots}
+      \end{itemize}
+      \item[] \textcolor{white}{Act B}
+      \item[] \begin{itemize}
+        \item[] \textcolor{white}{Youtube Link}
+        \item[] \textcolor{white}{Facebook Link}
+        \item[] \textcolor{white}{Instagram Link}
+        \item[] \textcolor{white}{\dots}
+      \end{itemize}
+      \item[] \textcolor{white}{Act C}
+      \item[] \begin{itemize}
+        \item[] \textcolor{white}{Youtube Link}
+        \item[] \textcolor{white}{Facebook Link}
+        \item[] \textcolor{white}{Instagram Link}
+        \item[] \textcolor{white}{\dots}
+      \end{itemize}
+
+  \end{itemize}\end{varwidth}}};
+  \end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+  font=\sffamily,line width=1pt]
+  \node[bigbox, rounded corners, very thick, minimum height=600, minimum width=\textwidth] at (0,0) {};
+  \node[inner sep=0pt, rounded corners] () at (-0,8.9)
+  {\includegraphics[scale=0.46, trim={0 1150 0 250, width=\textwidth}, clip]{background.jpeg}};
+  \draw[white, very thick] (-7, 10) -- (-6, 10);
+  \draw[white, very thick] (-7, 9.8) -- (-6, 9.8);
+  \draw[white, very thick] (-7, 9.6) -- (-6, 9.6);
+  \node[rounded corners, draw, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,6.4){\Huge{\textbf{ACTS}}};
+  \node[rounded corners, minimum width=\textwidth, text=white,  minimum height=455, left color=left, right color=left!1!yellow] at (0,-2.5) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{white}{Act A}
+      \item[] \begin{itemize}
+        \item[] \textcolor{white}{Youtube Link}
+        \item[] \textcolor{white}{Facebook Link}
+        \item[] \textcolor{white}{Instagram Link}
+        \item[] \textcolor{white}{\dots}
+      \end{itemize}
+      \item[] \textcolor{white}{Act B}
+      \item[] \begin{itemize}
+        \item[] \textcolor{white}{Youtube Link}
+        \item[] \textcolor{white}{Facebook Link}
+        \item[] \textcolor{white}{Instagram Link}
+        \item[] \textcolor{white}{\dots}
+      \end{itemize}
+      \item[] \textcolor{white}{Act C}
+      \item[] \begin{itemize}
+        \item[] \textcolor{white}{Youtube Link}
+        \item[] \textcolor{white}{Facebook Link}
+        \item[] \textcolor{white}{Instagram Link}
+        \item[] \textcolor{white}{\dots}
+      \end{itemize}
+
+  \end{itemize}\end{varwidth}}};
+  \node[rounded corners, draw, minimum width=5cm, minimum height=600, fill=navi] at (-4.78,0) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{yellow}{Acts}
+      \item[] \textcolor{yellow}{\huge{\textbf{Line Up}}}
+      \item[] \textcolor{yellow}{Info} 
+      \item[] \textcolor{yellow}{News}
+      \item[] \textcolor{yellow}{Essen}
+      \item[] \textcolor{yellow}{Karte}
+  \end{itemize}\end{varwidth}}};
+  \end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+  font=\sffamily,line width=1pt]
+  \node[bigbox, rounded corners, very thick, minimum height=600, minimum width=\textwidth] at (0,0) {};
+  \node[inner sep=0pt, rounded corners] () at (-0,8.9)
+  {\includegraphics[scale=0.46, trim={0 1150 0 250, width=\textwidth}, clip]{background.jpeg}};
+  \draw[white, very thick] (-7, 10) -- (-6, 10);
+  \draw[white, very thick] (-7, 9.8) -- (-6, 9.8);
+  \draw[white, very thick] (-7, 9.6) -- (-6, 9.6);
+  \node[rounded corners, draw, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,6.4){\Huge{\textbf{Line Up}}};
+  \node[minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,4.7){\textbf{Main Stage}};
+  \node (species1) [shape=rectangle, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,2.95) {
+    \begin{tabular}{|c|c|c|}
+      \hline
+      \textcolor{white}{\textbf{Uhrzeit}} &\textcolor{white}{\textbf{Freitag}} &\textcolor{white}{\textbf{Samstag}} \\\hline
+      \textcolor{white}{\vdots} &\textcolor{white}{\vdots} &\textcolor{white}{\vdots} \\
+      \hline
+    \end{tabular}
+  };
+  \node[minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,1.21){\textbf{DJ Zelt}};
+  \node (species1) [shape=rectangle, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,-0.2) {
+    \begin{tabular}{|c|c|c|}
+      \hline
+      \textcolor{white}{\textbf{Uhrzeit}} &\textcolor{white}{\textbf{Freitag}} &\textcolor{white}{\textbf{Samstag}} \\\hline
+      \textcolor{white}{\vdots} &\textcolor{white}{\vdots} &\textcolor{white}{\vdots} \\
+      \hline
+    \end{tabular}
+  };
+  \node[rounded corners, minimum width=\textwidth, text=white, minimum height=270, left color=left, right color=left!1!yellow] at (0,-5.8) {};
+  \end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+  font=\sffamily,line width=1pt]
+  \node[bigbox, rounded corners, very thick, minimum height=600, minimum width=\textwidth] at (0,0) {};
+  \node[inner sep=0pt, rounded corners] () at (-0,8.9)
+  {\includegraphics[scale=0.46, trim={0 1150 0 250, width=\textwidth}, clip]{background.jpeg}};
+  \draw[white, very thick] (-7, 10) -- (-6, 10);
+  \draw[white, very thick] (-7, 9.8) -- (-6, 9.8);
+  \draw[white, very thick] (-7, 9.6) -- (-6, 9.6);
+  \node[rounded corners, draw, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,6.4){\Huge{\textbf{Line Up}}};
+  \node[minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,4.7){\textbf{Main Stage}};
+  \node (species1) [shape=rectangle, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,2.95) {
+    \begin{tabular}{|c|c|c|}
+      \hline
+      \textcolor{white}{\textbf{Uhrzeit}} &\textcolor{white}{\textbf{Freitag}} &\textcolor{white}{\textbf{Samstag}} \\\hline
+      \textcolor{white}{\vdots} &\textcolor{white}{\vdots} &\textcolor{white}{\vdots} \\
+      \hline
+    \end{tabular}
+  };
+  \node[minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,1.21){\textbf{DJ Zelt}};
+  \node (species1) [shape=rectangle, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,-0.2) {
+    \begin{tabular}{|c|c|c|}
+      \hline
+      \textcolor{white}{\textbf{Uhrzeit}} &\textcolor{white}{\textbf{Freitag}} &\textcolor{white}{\textbf{Samstag}} \\\hline
+      \textcolor{white}{\vdots} &\textcolor{white}{\vdots} &\textcolor{white}{\vdots} \\
+      \hline
+    \end{tabular}
+  };
+  \node[rounded corners, minimum width=\textwidth, text=white, minimum height=270, left color=left, right color=left!1!yellow] at (0,-5.8) {};
+  \node[rounded corners, draw, minimum width=5cm, minimum height=600, fill=navi] at (-4.78,0) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{yellow}{Acts}
+      \item[] \textcolor{yellow}{Line Up}
+      \item[] \textcolor{yellow}{\huge{\textbf{Info}}} 
+      \item[] \textcolor{yellow}{News}
+      \item[] \textcolor{yellow}{Essen}
+      \item[] \textcolor{yellow}{Karte}
+  \end{itemize}\end{varwidth}}};
+  \end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+  font=\sffamily,line width=1pt]
+  \node[bigbox, rounded corners, very thick, minimum height=600, minimum width=\textwidth] at (0,0) {};
+  \node[inner sep=0pt, rounded corners] () at (-0,8.9)
+  {\includegraphics[scale=0.46, trim={0 1150 0 250, width=\textwidth}, clip]{background.jpeg}};
+  \draw[white, very thick] (-7, 10) -- (-6, 10);
+  \draw[white, very thick] (-7, 9.8) -- (-6, 9.8);
+  \draw[white, very thick] (-7, 9.6) -- (-6, 9.6);
+  \node[rounded corners, draw, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,6.4){\Huge{\textbf{INFO}}};
+  \node[rounded corners, minimum width=\textwidth, text=white,  minimum height=455, left color=left, right color=left!1!yellow] at (0,-2.5) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{white}{Allgemeine Informationen}
+      \item[] \textcolor{white}{Sicherheits Regeln}
+      \item[] \textcolor{white}{Festival Allgemein}
+      \item[] \textcolor{white}{\LARGE{\vdots}}
+  \end{itemize}\end{varwidth}}};
+  \end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+  font=\sffamily,line width=1pt]
+  \node[bigbox, rounded corners, very thick, minimum height=600, minimum width=\textwidth] at (0,0) {};
+  \node[inner sep=0pt, rounded corners] () at (-0,8.9)
+  {\includegraphics[scale=0.46, trim={0 1150 0 250, width=\textwidth}, clip]{background.jpeg}};
+  \draw[white, very thick] (-7, 10) -- (-6, 10);
+  \draw[white, very thick] (-7, 9.8) -- (-6, 9.8);
+  \draw[white, very thick] (-7, 9.6) -- (-6, 9.6);
+  \node[rounded corners, draw, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,6.4){\Huge{\textbf{INFO}}};
+  \node[rounded corners, minimum width=\textwidth, text=white,  minimum height=455, left color=left, right color=left!1!yellow] at (0,-2.5) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{white}{Allgemeine Informationen}
+      \item[] \textcolor{white}{Sicherheits Regeln}
+      \item[] \textcolor{white}{Festival Allgemein}
+      \item[] \textcolor{white}{\LARGE{\vdots}}
+  \end{itemize}\end{varwidth}}};
+  \node[rounded corners, draw, minimum width=5cm, minimum height=600, fill=navi] at (-4.78,0) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{yellow}{Acts}
+      \item[] \textcolor{yellow}{Line Up}
+      \item[] \textcolor{yellow}{Info} 
+      \item[] \textcolor{yellow}{\huge{\textbf{News}}}
+      \item[] \textcolor{yellow}{Essen}
+      \item[] \textcolor{yellow}{Karte}
+  \end{itemize}\end{varwidth}}};
+  \end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+  font=\sffamily,line width=1pt]
+  \node[bigbox, rounded corners, very thick, minimum height=600, minimum width=\textwidth] at (0,0) {};
+  \node[inner sep=0pt, rounded corners] () at (-0,8.9)
+  {\includegraphics[scale=0.46, trim={0 1150 0 250, width=\textwidth}, clip]{background.jpeg}};
+  \draw[white, very thick] (-7, 10) -- (-6, 10);
+  \draw[white, very thick] (-7, 9.8) -- (-6, 9.8);
+  \draw[white, very thick] (-7, 9.6) -- (-6, 9.6);
+  \node[rounded corners, draw, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,6.4){\textbf{\Huge{News}}};
+  \node[rounded corners, minimum width=\textwidth, text=white,  minimum height=455, left color=left, right color=left!1!yellow] at (0,-2.5) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{white}{Sturmwarunungen}
+      \item[] \textcolor{white}{Neue Headliner bzw Acts}
+      \item[] \textcolor{white}{Loast And Found}
+      \item[] \textcolor{white}{Wettervorhersage}
+      \item[] \textcolor{white}{\dots}
+  \end{itemize}\end{varwidth}}};
+  \end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+  font=\sffamily,line width=1pt]
+  \node[bigbox, rounded corners, very thick, minimum height=600, minimum width=\textwidth] at (0,0) {};
+  \node[inner sep=0pt, rounded corners] () at (-0,8.9)
+  {\includegraphics[scale=0.46, trim={0 1150 0 250, width=\textwidth}, clip]{background.jpeg}};
+  \draw[white, very thick] (-7, 10) -- (-6, 10);
+  \draw[white, very thick] (-7, 9.8) -- (-6, 9.8);
+  \draw[white, very thick] (-7, 9.6) -- (-6, 9.6);
+  \node[rounded corners, draw, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,6.4){\textbf{\Huge{News}}};
+  \node[rounded corners, minimum width=\textwidth, text=white,  minimum height=455, left color=left, right color=left!1!yellow] at (0,-2.5) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{white}{Sturmwarunungen}
+      \item[] \textcolor{white}{Neue Headliner bzw Acts}
+      \item[] \textcolor{white}{Loast And Found}
+      \item[] \textcolor{white}{Wettervorhersage}
+      \item[] \textcolor{white}{\dots}
+  \end{itemize}\end{varwidth}}};
+  \node[rounded corners, draw, minimum width=5cm, minimum height=600, fill=navi] at (-4.78,0) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{yellow}{Acts}
+      \item[] \textcolor{yellow}{Line Up}
+      \item[] \textcolor{yellow}{Info} 
+      \item[] \textcolor{yellow}{News}
+      \item[] \textcolor{yellow}{\huge{\textbf{Essen}}}
+      \item[] \textcolor{yellow}{Karte}
+  \end{itemize}\end{varwidth}}};
+  \end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+  font=\sffamily,line width=1pt]
+  \node[bigbox, rounded corners, very thick, minimum height=600, minimum width=\textwidth] at (0,0) {};
+  \node[inner sep=0pt, rounded corners] () at (-0,8.9)
+  {\includegraphics[scale=0.46, trim={0 1150 0 250, width=\textwidth}, clip]{background.jpeg}};
+  \draw[white, very thick] (-7, 10) -- (-6, 10);
+  \draw[white, very thick] (-7, 9.8) -- (-6, 9.8);
+  \draw[white, very thick] (-7, 9.6) -- (-6, 9.6);
+  \node[rounded corners, draw, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,6.4){\Huge{\textbf{Foodtruck Line Up}}};
+  \node[rounded corners, minimum width=\textwidth, text=white,  minimum height=455, left color=left, right color=left!1!yellow] at (0,-2.5) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{white}{Foodtruck A}
+      \item[] \begin{itemize}
+        \item[] \textcolor{white}{Informationen}
+        \item[] \textcolor{white}{Speisekarte}
+        \item[] \textcolor{white}{Allergene} 
+        \item[] \textcolor{white}{\dots}
+      \end{itemize}
+      \item[] \textcolor{white}{Foodtruck B}
+      \item[] \begin{itemize}
+        \item[] \textcolor{white}{Informationen}
+        \item[] \textcolor{white}{Speisekarte}
+        \item[] \textcolor{white}{Allergene} 
+        \item[] \textcolor{white}{\dots}
+      \end{itemize}
+      \item[] \textcolor{white}{Foodtruck C}
+      \item[] \begin{itemize}
+        \item[] \textcolor{white}{Informationen}
+        \item[] \textcolor{white}{Speisekarte}
+        \item[] \textcolor{white}{Allergene} 
+        \item[] \textcolor{white}{\dots}
+      \end{itemize}
+     
+
+  \end{itemize}\end{varwidth}}};
+  \end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+  font=\sffamily,line width=1pt]
+  \node[bigbox, rounded corners, very thick, minimum height=600, minimum width=\textwidth] at (0,0) {};
+  \node[inner sep=0pt, rounded corners] () at (-0,8.9)
+  {\includegraphics[scale=0.46, trim={0 1150 0 250, width=\textwidth}, clip]{background.jpeg}};
+  \draw[white, very thick] (-7, 10) -- (-6, 10);
+  \draw[white, very thick] (-7, 9.8) -- (-6, 9.8);
+  \draw[white, very thick] (-7, 9.6) -- (-6, 9.6);
+  \node[rounded corners, draw, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,6.4){\Huge{\textbf{Foodtruck Line Up}}};
+  \node[rounded corners, minimum width=\textwidth, text=white,  minimum height=455, left color=left, right color=left!1!yellow] at (0,-2.5) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{white}{Foodtruck A}
+      \item[] \begin{itemize}
+        \item[] \textcolor{white}{Informationen}
+        \item[] \textcolor{white}{Speisekarte}
+        \item[] \textcolor{white}{Allergene} 
+        \item[] \textcolor{white}{\dots}
+      \end{itemize}
+      \item[] \textcolor{white}{Foodtruck B}
+      \item[] \begin{itemize}
+        \item[] \textcolor{white}{Informationen}
+        \item[] \textcolor{white}{Speisekarte}
+        \item[] \textcolor{white}{Allergene} 
+        \item[] \textcolor{white}{\dots}
+      \end{itemize}
+      \item[] \textcolor{white}{Foodtruck C}
+      \item[] \begin{itemize}
+        \item[] \textcolor{white}{Informationen}
+        \item[] \textcolor{white}{Speisekarte}
+        \item[] \textcolor{white}{Allergene} 
+        \item[] \textcolor{white}{\dots}
+      \end{itemize}
+     
+
+  \end{itemize}\end{varwidth}}};
+  \node[rounded corners, draw, minimum width=5cm, minimum height=600, fill=navi] at (-4.78,0) {\Large
+  {\begin{varwidth}{\linewidth}\begin{itemize}
+      \item[] \textcolor{yellow}{Acts}
+      \item[] \textcolor{yellow}{Line Up}
+      \item[] \textcolor{yellow}{Info} 
+      \item[] \textcolor{yellow}{News}
+      \item[] \textcolor{yellow}{Essen}
+      \item[] \textcolor{yellow}{\huge{\textbf{Karte}}}
+  \end{itemize}\end{varwidth}}};
+  \end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+  font=\sffamily,line width=1pt]
+  \node[bigbox, rounded corners, very thick, minimum height=600, minimum width=\textwidth] at (0,0) {};
+  \node[inner sep=0pt, rounded corners] () at (-0,8.9)
+  {\includegraphics[scale=0.46, trim={0 1150 0 250, width=\textwidth}, clip]{background.jpeg}};
+  \draw[white, very thick] (-7, 10) -- (-6, 10);
+  \draw[white, very thick] (-7, 9.8) -- (-6, 9.8);
+  \draw[white, very thick] (-7, 9.6) -- (-6, 9.6);
+  \node[rounded corners, draw, minimum width=\textwidth, text=white, minimum height=50, left color=left, right color=left!1!yellow] at (0,6.4){\Huge{\textbf{Karte}}};
+  \node[rounded corners, minimum width=\textwidth, text=white,  minimum height=455, left color=left, right color=left!1!yellow] at (0,-2.5) {\Huge{\textcolor{white}{Lageplan}}};
+  \end{tikzpicture}
+\end{figure}
+
+
+\end{document}
