@@ -86,68 +86,45 @@ BCOR15mm               % Bindekorrektur
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 \begin{document}
-  \section*{Projektvertilung}
-  \begin{tabular}{@{}lP{6cm}@{}} 
-      \textbf{Projektgebiet} & \textbf{Person} \\[5pt]
-      App Backend &
-        \begin{itemize}
-          \item Björn 
-          \item Babsi
-          \item Jojo
-        \end{itemize}\\
+  \section*{Notwendige CLI Git Befehle}
+  Auschecken des Repositories mittels https:
 
-      App Design &
-      \begin{itemize}
-          \item Sebi
-          \item Döms
-          \item Alex
-      \end{itemize}\\
+  \texttt{git clone https://github.com/Kartell-der-Liebe/androidApp.git}
 
-      Web Server &
-      \begin{itemize}
-          \item Döms
-          \item Björn
-      \end{itemize}\\
-  \end{tabular}
+  Auschecken des Repositories mittels ssh:
 
-  \section*{Aufgaben im Projekt}
-  \subsection*{App Backend}
-  \begin{itemize}
-      \item Verbinden mit Web Server
-      \item Verknüpfen einzelner Fragmente duch Buttons,\dots
-      \item Hintergrundaktivität
-  \end{itemize}
+  \texttt{git clone git@github.com:Kartell-der-Liebe/androidApp.git}
 
-  \subsection*{App Design}
-  \begin{itemize}
-      \item Erstellen eines Styler für Fragmente, Texte,\dots
-      \item Festlegen eines Farb Themas in der App
-      \item Evtl Style via CSS generieren
-      \item Einbinden des Logos oder Festivalnamen als Überschriften
-  \end{itemize}
+  Abrufen des Status, auf welchem Branch man ist, welche Dateien neu sind oder geändert wurden
 
-  \subsubsection*{Web Server}
-  \begin{itemize}
-      \item Aufsetzen eines Web Servers mittels Apache,\dots
-      \item Anlegen der Daten für App in geeigneter Struktur
-      \item Installieren und aufsetzen von RSS
-  \end{itemize}
+  \texttt{git status}
 
-  \section*{TODO}
-  \begin{itemize}
-    \item Navigations Menü erstellen @Björn
-    \item Fragmente mit leeren Views
-  \end{itemize}
+  Erstellen eines neuen Branches:
 
-  \section*{Weitere Vorschläge}
-  \begin{itemize}
-    \item Interaktivität per App bei Sachen die Stören
-    \item Voranmerkungen für Acts, per Push Benachrichtigungen
-    \item Act Vorbemerkung mit Timer, der einen informaiert
-    \item iframe Integration von der Website zur App
-    \item Impressum und Datenschtz per Link
-    \item Karte mit Treffpunkt zu Kontakten
-    \item Kontakte, Ansprechpartner, Notruf, Führerbunker, Info Point
-    \item Dorfladen mit in Essen Menü übernehmen
-  \end{itemize}
+  \texttt{git checkout -b feature/<eigener Branch name>}
+
+  herunterladen der neusten Änderungen von eigenem Branch
+
+  \texttt{git pull}
+
+  herunterladen der neusten Änderungen von anderem Branch
+
+  \texttt{git pull origin <Branchname>}
+
+  Änderungen oder neue Dateien zu git hinzufügen
+
+  \texttt{git add -A}
+
+  Kommentieren der Änderungen oder neuen Dateien
+
+  \texttt{git commit -m "Beispieltext"}
+
+  Erstmaliges hochladen eigener Änderungen auf den Server
+
+  \texttt{git push ---set-upstream origin <Branchname>}
+
+  hochladen eigener Änderungen auf den Server
+
+  \texttt{git push}
+  
 \end{document}
