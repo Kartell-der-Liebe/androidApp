@@ -1,0 +1,158 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[a4paper,12pt,
+headsepline,           % Linie zw. Kopfzeile und Text
+oneside,               % zweiseitig
+pointlessnumbers,      % keine Punkte nach den letzten Ziffern in Überschriften
+bibtotoc,              % LV im IV
+%DIV=15,               % Satzspiegel auf 15er Raster, schmalere Ränder   
+BCOR15mm               % Bindekorrektur
+%,draft
+]{scrbook}
+\KOMAoptions{DIV=last} % Neuberechnung Satzspiegel nach Laden von Paket helvet
+
+\pagestyle{headings}
+\usepackage{blindtext}
+
+% für Texte in deutscher Sprache
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Helvetica als Standard-Dokumentschrift
+\usepackage[scaled]{helvet}
+%\usepackage{mathptmx}
+\renewcommand{\familydefault}{\sfdefault} 
+
+\usepackage{graphicx}
+
+% Literaturverzeichnis mit BibLKaTeX
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage[backend=bibtex8]{biblatex}
+\bibliography{bibliography}
+
+% Für Tabellen mit fester Gesamtbreite und variabler Spaltenbreite
+\usepackage{tabularx} 
+
+% Besondere Schriftauszeichnungen
+\usepackage{url}              % \url{http://...} in Schreibmaschinenschrift
+\usepackage{color}            % zum Setzen farbigen Textes
+
+\usepackage{amssymb, amsmath} % Pakete für Mathe-Umgebungen und -Symbole
+
+\usepackage{setspace}         % Paket für div. Abstände, z.B. ZA
+%\onehalfspacing              % nur dann, wenn gefordert; ist sehr groß!!
+\setlength{\parindent}{0pt}   % kein linker Einzug der ersten Absatzzeile
+\setlength{\parskip}{1.4ex plus 0.35ex minus 0.3ex} % Absatzabstand, leicht variabel
+
+% Tiefe, bis zu der Überschriften in das Inhaltsverzeichnis kommen
+\setcounter{tocdepth}{3}      % ist Standard
+
+% Beispiele für Quellcode
+\usepackage{listings}
+\lstset{language=Java,
+  showstringspaces=false,
+  frame=single,
+  numbers=left,
+  basicstyle=\ttfamily,
+  numberstyle=\tiny}
+
+%\usepackage[printonlyused, withpage]{acronym}
+\usepackage[printonlyused]{acronym}
+\usepackage{comment}
+\usepackage{longtable}
+%\usepackage[maxdepth=8, mark]{gitinfo2}
+\usepackage{bytefield}
+\usepackage{smartdiagram}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{hypcap}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage[outline]{contour}
+\usepackage{varwidth}
+\usepackage{array}
+
+\makeatletter
+\newcommand{\minipagetrue}{\@minipagetrue}
+
+\makeatother
+
+\usepackage{enumitem}
+\setlist[itemize]{nosep,after=\vskip-\baselineskip,label={\textbullet},leftmargin=*,before=\minipagetrue,}
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+  \section*{Projektvertilung}
+  \begin{tabular}{@{}lP{6cm}@{}} 
+      \textbf{Projektgebiet} & \textbf{Person} \\[5pt]
+      App Backend &
+        \begin{itemize}
+          \item Björn 
+          \item Babsi
+          \item Jojo
+        \end{itemize}\\
+
+      App Design &
+      \begin{itemize}
+          \item Sebi
+          \item Alex
+          \item Fabian
+      \end{itemize}\\
+
+      Web Server &
+      \begin{itemize}
+          \item Döms
+          \item Fabian
+          \item Björn
+      \end{itemize}\\
+  \end{tabular}
+
+  \section*{Aufgaben im Projekt}
+  \subsection*{App Backend}
+  \begin{itemize}
+      \item Verbinden mit Web Server
+      \item Verknüpfen einzelner Fragmente duch Buttons,\dots
+      \item Hintergrundaktivität
+  \end{itemize}
+
+  \subsection*{App Design}
+  \begin{itemize}
+      \item Erstellen eines Styler für Fragmente, Texte,\dots
+      \item Festlegen eines Farb Themas in der App
+      \item Evtl Style via CSS generieren
+      \item Einbinden des Logos oder Festivalnamen als Überschriften
+  \end{itemize}
+
+  \subsubsection*{Web Server}
+  \begin{itemize}
+      \item Aufsetzen eines Web Servers mittels Apache,\dots
+      \item Anlegen der Daten für App in geeigneter Struktur
+      \item Installieren und aufsetzen von RSS
+  \end{itemize}
+
+  \section*{TODO}
+  \begin{itemize}
+    \item Navigations Menü erstellen @Björn
+    \item Fragmente mit leeren Views
+  \end{itemize}
+
+  \section*{Weitere Vorschläge}
+  \begin{itemize}
+    \item Interaktivität per App bei Sachen die Stören
+    \item Voranmerkungen für Acts, per Push Benachrichtigungen
+    \item Act Vorbemerkung mit Timer, der einen informaiert
+    \item iframe Integration von der Website zur App
+    \item Impressum und Datenschtz per Link
+    \item Karte mit Treffpunkt zu Kontakten
+    \item Kontakte, Ansprechpartner, Notruf, Führerbunker, Info Point
+    \item Dorfladen mit in Essen Menü übernehmen
+    \item Favoriten Markieren und merken jede Person
+    \item Menüleiste unten für einzelne Fragmente hinzufügen
+    \item News Anzeige mit laufenden Informationen
+    \item Member Area mit Arbeitsplan, \dots
+  \end{itemize}
+\end{document}
