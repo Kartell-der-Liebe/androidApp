@@ -13,14 +13,19 @@ class LineUpFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        println("Ho")
+        val view = inflater.inflate(R.layout.fragment_line_up, container, false)
         // Inflate the layout for this fragment
         val navListener = BottomNavigationView.OnNavigationItemReselectedListener { menuItem ->
             when (menuItem.itemId){
-                R.id.bb_menu_arac ->{
-                    val fragment = LineUpFragment()
+                R.id.lineUpFragment1 ->{
+                    println("Hallo 1")
+                }
+                R.id.lineUpFragment2 ->{
+                    println("Hallo 2")
                 }
             }
         }
-        return inflater.inflate(R.layout.fragment_line_up, container, false)
+        return view
     }
 }
