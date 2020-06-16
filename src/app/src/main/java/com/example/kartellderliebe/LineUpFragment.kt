@@ -27,5 +27,4 @@ class LineUpFragment : Fragment() {
             }
         }
         return view
-    }
 }
