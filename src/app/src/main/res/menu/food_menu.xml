@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/foodFragment"
+        android:title="Foodtruck" />
+    <item
+        android:id="@+id/foodsharingFragment"
+        android:title="Food Sharing" />
+    <item
+        android:id="@+id/dorfladenFragment"
+        android:title="Dorfladen" />
+</menu>

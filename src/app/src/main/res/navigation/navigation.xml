@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.kartellderliebe.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.kartellderliebe.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/festivalInfosFragment2"
+        android:name="com.example.kartellderliebe.FestivalInfosFragment"
+        android:label="fragment_festival_infos"
+        tools:layout="@layout/fragment_festival_infos" />
+    <fragment
+        android:id="@+id/festivalNewsFragment2"
+        android:name="com.example.kartellderliebe.FestivalNewsFragment"
+        android:label="fragment_festival_news"
+        tools:layout="@layout/fragment_festival_news" />
+    <fragment
+        android:id="@+id/foodFragment2"
+        android:name="com.example.kartellderliebe.FoodFragment"
+        android:label="fragment_food"
+        tools:layout="@layout/fragment_food" />
+    <fragment
+        android:id="@+id/lineUpFragment2"
+        android:name="com.example.kartellderliebe.LineUpFragment"
+        android:label="fragment_line_up"
+        tools:layout="@layout/fragment_line_up" />
+    <fragment
+        android:id="@+id/timeTableFragment2"
+        android:name="com.example.kartellderliebe.TimeTableFragment"
+        android:label="fragment_time_table"
+        tools:layout="@layout/fragment_time_table" />
+    <fragment
+        android:id="@+id/anreiseFragment2"
+        android:name="com.example.kartellderliebe.AnreiseFragment"
+        android:label="fragment_anreise"
+        tools:layout="@layout/fragment_anreise" />
+    <fragment
+        android:id="@+id/campingFragment2"
+        android:name="com.example.kartellderliebe.CampingFragment"
+        android:label="fragment_camping"
+        tools:layout="@layout/fragment_camping" />
+    <fragment
+        android:id="@+id/foodSharingFragment"
+        android:name="com.example.kartellderliebe.FoodSharingFragment"
+        android:label="fragment_dorfladen"
+        tools:layout="@layout/fragment_dorfladen" />
+    <fragment
+        android:id="@+id/unter18Fragment2"
+        android:name="com.example.kartellderliebe.Unter18Fragment"
+        android:label="fragment_unter18"
+        tools:layout="@layout/fragment_unter18" />
+    <fragment
+        android:id="@+id/dorfladenFragment2"
+        android:name="com.example.kartellderliebe.DorfladenFragment"
+        android:label="DorfladenFragment" />
+</navigation>
