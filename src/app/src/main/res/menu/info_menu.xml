@@ -1,16 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bb_menu_arac"
+        android:enabled="true"
+        android:title="Allgemein"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/bb_menu_yakin"
+        android:enabled="true"
+        android:title="Anreise"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/bb_menu_yaklasan"
+        android:enabled="true"
+        android:title="Camping"
+        app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/festivalInfosFragment"
-        android:title="Allg" />
-    <item
-        android:id="@+id/anreiseFragment"
-        android:title="Anr" />
-    <item
-        android:id="@+id/campingFragment"
-        android:title="Camp" />
-    <item
-        android:id="@+id/unter18Fragment"
-        android:title="<18" />
+        android:id="@+id/bb_menu_ipucu"
+        android:enabled="true"
+        android:title="Unter 18"
+        app:showAsAction="ifRoom" />
 </menu>

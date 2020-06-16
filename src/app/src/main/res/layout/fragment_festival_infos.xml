@@ -19,9 +19,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
-        android:background="#"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/info_menu"
+        app:labelVisibilityMode="labeled"
         tools:layout_editor_absoluteX="-19dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
