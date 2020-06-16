@@ -34,4 +34,9 @@
         android:name="com.example.kartellderliebe.LineUpFragment"
         android:label="fragment_line_up"
         tools:layout="@layout/fragment_line_up" />
+    <fragment
+        android:id="@+id/timeTableFragment2"
+        android:name="com.example.kartellderliebe.timeTableFragment"
+        android:label="fragment_time_table"
+        tools:layout="@layout/fragment_time_table" />
 </navigation>
