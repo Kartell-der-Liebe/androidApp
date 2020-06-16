@@ -1,0 +1,130 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[a4paper,12pt,
+headsepline,           % Linie zw. Kopfzeile und Text
+oneside,               % zweiseitig
+pointlessnumbers,      % keine Punkte nach den letzten Ziffern in Überschriften
+bibtotoc,              % LV im IV
+%DIV=15,               % Satzspiegel auf 15er Raster, schmalere Ränder   
+BCOR15mm               % Bindekorrektur
+%,draft
+]{scrbook}
+\KOMAoptions{DIV=last} % Neuberechnung Satzspiegel nach Laden von Paket helvet
+
+\pagestyle{headings}
+\usepackage{blindtext}
+
+% für Texte in deutscher Sprache
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Helvetica als Standard-Dokumentschrift
+\usepackage[scaled]{helvet}
+%\usepackage{mathptmx}
+\renewcommand{\familydefault}{\sfdefault} 
+
+\usepackage{graphicx}
+
+% Literaturverzeichnis mit BibLKaTeX
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage[backend=bibtex8]{biblatex}
+\bibliography{bibliography}
+
+% Für Tabellen mit fester Gesamtbreite und variabler Spaltenbreite
+\usepackage{tabularx} 
+
+% Besondere Schriftauszeichnungen
+\usepackage{url}              % \url{http://...} in Schreibmaschinenschrift
+\usepackage{color}            % zum Setzen farbigen Textes
+
+\usepackage{amssymb, amsmath} % Pakete für Mathe-Umgebungen und -Symbole
+
+\usepackage{setspace}         % Paket für div. Abstände, z.B. ZA
+%\onehalfspacing              % nur dann, wenn gefordert; ist sehr groß!!
+\setlength{\parindent}{0pt}   % kein linker Einzug der ersten Absatzzeile
+\setlength{\parskip}{1.4ex plus 0.35ex minus 0.3ex} % Absatzabstand, leicht variabel
+
+% Tiefe, bis zu der Überschriften in das Inhaltsverzeichnis kommen
+\setcounter{tocdepth}{3}      % ist Standard
+
+% Beispiele für Quellcode
+\usepackage{listings}
+\lstset{language=Java,
+  showstringspaces=false,
+  frame=single,
+  numbers=left,
+  basicstyle=\ttfamily,
+  numberstyle=\tiny}
+
+%\usepackage[printonlyused, withpage]{acronym}
+\usepackage[printonlyused]{acronym}
+\usepackage{comment}
+\usepackage{longtable}
+%\usepackage[maxdepth=8, mark]{gitinfo2}
+\usepackage{bytefield}
+\usepackage{smartdiagram}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{hypcap}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage[outline]{contour}
+\usepackage{varwidth}
+\usepackage{array}
+
+\makeatletter
+\newcommand{\minipagetrue}{\@minipagetrue}
+
+\makeatother
+
+\usepackage{enumitem}
+\setlist[itemize]{nosep,after=\vskip-\baselineskip,label={\textbullet},leftmargin=*,before=\minipagetrue,}
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+  \section*{Notwendige CLI Git Befehle}
+  Auschecken des Repositories mittels https:
+
+  \texttt{git clone https://github.com/Kartell-der-Liebe/androidApp.git}
+
+  Auschecken des Repositories mittels ssh:
+
+  \texttt{git clone git@github.com:Kartell-der-Liebe/androidApp.git}
+
+  Abrufen des Status, auf welchem Branch man ist, welche Dateien neu sind oder geändert wurden
+
+  \texttt{git status}
+
+  Erstellen eines neuen Branches:
+
+  \texttt{git checkout -b feature/<eigener Branch name>}
+
+  herunterladen der neusten Änderungen von eigenem Branch
+
+  \texttt{git pull}
+
+  herunterladen der neusten Änderungen von anderem Branch
+
+  \texttt{git pull origin <Branchname>}
+
+  Änderungen oder neue Dateien zu git hinzufügen
+
+  \texttt{git add -A}
+
+  Kommentieren der Änderungen oder neuen Dateien
+
+  \texttt{git commit -m "Beispieltext"}
+
+  Erstmaliges hochladen eigener Änderungen auf den Server
+
+  \texttt{git push ---set-upstream origin <Branchname>}
+
+  hochladen eigener Änderungen auf den Server
+
+  \texttt{git push}
+  
+\end{document}
