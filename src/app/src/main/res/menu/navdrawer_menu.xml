@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Home" />
+    <item
+        android:id="@+id/lineUpFragment2"
+        android:title="Line Up" />
+    <item
+        android:id="@+id/foodFragment2"
+        android:title="Food" />
+    <item
+        android:id="@+id/festivalNewsFragment2"
+        android:title="Festival News" />
+    <item
+        android:id="@+id/festivalInfosFragment2"
+        android:title="Festival Infos" />
+</menu>
