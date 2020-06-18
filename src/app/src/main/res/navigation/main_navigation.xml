@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.kartellderliebe.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.kartellderliebe.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/festivalInfosFragment2"
+        android:name="com.example.kartellderliebe.FestivalInfosFragment"
+        android:label="fragment_festival_infos"
+        tools:layout="@layout/fragment_festival_infos" />
+    <fragment
+        android:id="@+id/festivalNewsFragment2"
+        android:name="com.example.kartellderliebe.FestivalNewsFragment"
+        android:label="fragment_festival_news"
+        tools:layout="@layout/fragment_festival_news" />
+    <fragment
+        android:id="@+id/foodFragment2"
+        android:name="com.example.kartellderliebe.FoodFragment"
+        android:label="fragment_food"
+        tools:layout="@layout/fragment_food" />
+    <fragment
+        android:id="@+id/actsMainFragment"
+        android:name="com.example.kartellderliebe.ActsMainFragment"
+        android:label="fragment_acts_main"
+        tools:layout="@layout/fragment_acts_main" />
+</navigation>
