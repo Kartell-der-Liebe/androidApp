@@ -14,12 +14,6 @@ android {
     dataBinding {
         enabled = true
     }
-    viewBinding {
-        enabled = true
-    }
-    buildFeatures {
-        viewBinding true
-    }
 
     defaultConfig {
         applicationId "com.example.kartellderliebe"

@@ -31,7 +31,7 @@
         tools:layout="@layout/fragment_food" />
     <fragment
         android:id="@+id/actsMainFragment"
-        android:name="com.example.kartellderliebe.ActsMainFragment"
+        android:name="com.example.kartellderliebe.LineUpMainFragment"
         android:label="fragment_acts_main"
         tools:layout="@layout/fragment_acts_main" />
 </navigation>
