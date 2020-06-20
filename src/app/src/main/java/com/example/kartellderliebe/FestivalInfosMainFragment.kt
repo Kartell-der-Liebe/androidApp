@@ -5,23 +5,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.kartellderliebe.databinding.FragmentActsMainBinding
+import com.example.kartellderliebe.databinding.FragmentFestivalInfosMainBinding
 import com.google.android.material.tabs.TabLayout
 
-class LineUpMainFragment : Fragment(R.layout.fragment_acts_main) {
+class FestivalInfosMainFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentActsMainBinding.inflate(inflater, container, false)
+        val binding = FragmentFestivalInfosMainBinding.inflate(inflater, container, false)
         val tabLayout = binding.tabLayout
-        tabLayout.addTab(tabLayout.newTab().setText("Acts"))
-        tabLayout.addTab(tabLayout.newTab().setText("Time Table"))
+        tabLayout.addTab(tabLayout.newTab().setText("Allgemein"))
+        tabLayout.addTab(tabLayout.newTab().setText("Anreise"))
+        tabLayout.addTab(tabLayout.newTab().setText("Camping"))
+        tabLayout.addTab(tabLayout.newTab().setText("Unter 18"))
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
         val viewPager = binding.viewPager
         val tabsAdapter = activity?.supportFragmentManager?.let {
-            TabsAdapterLineUp(
+            TabsAdapterFestivalInfos(
                 it,
                 tabLayout.tabCount
             )
@@ -40,6 +42,4 @@ class LineUpMainFragment : Fragment(R.layout.fragment_acts_main) {
         })
         return binding.root
     }
-
-
 }

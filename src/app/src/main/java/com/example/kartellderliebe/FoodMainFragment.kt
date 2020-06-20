@@ -5,23 +5,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.kartellderliebe.databinding.FragmentActsMainBinding
+import com.example.kartellderliebe.databinding.FragmentFoodMainBinding
 import com.google.android.material.tabs.TabLayout
 
-class LineUpMainFragment : Fragment(R.layout.fragment_acts_main) {
+class FoodMainFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentActsMainBinding.inflate(inflater, container, false)
+        val binding = FragmentFoodMainBinding.inflate(inflater, container, false)
         val tabLayout = binding.tabLayout
-        tabLayout.addTab(tabLayout.newTab().setText("Acts"))
-        tabLayout.addTab(tabLayout.newTab().setText("Time Table"))
+        tabLayout.addTab(tabLayout.newTab().setText("Foodtrucks"))
+        tabLayout.addTab(tabLayout.newTab().setText("Food Sharing"))
+        tabLayout.addTab(tabLayout.newTab().setText("Dorfladen"))
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
         val viewPager = binding.viewPager
         val tabsAdapter = activity?.supportFragmentManager?.let {
-            TabsAdapterLineUp(
+            TabsAdapterFood(
                 it,
                 tabLayout.tabCount
             )
@@ -40,6 +41,4 @@ class LineUpMainFragment : Fragment(R.layout.fragment_acts_main) {
         })
         return binding.root
     }
-
-
 }
