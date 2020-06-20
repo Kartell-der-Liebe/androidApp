@@ -9,7 +9,20 @@
         android:id="@+id/homeFragment"
         android:name="com.example.kartellderliebe.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_actsMainFragment"
+            app:destination="@id/actsMainFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_foodMainFragment"
+            app:destination="@id/foodMainFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_festivalInfosMainFragment"
+            app:destination="@id/festivalInfosMainFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_festivalNewsFragment"
+            app:destination="@id/festivalNewsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.kartellderliebe.SettingsFragment"

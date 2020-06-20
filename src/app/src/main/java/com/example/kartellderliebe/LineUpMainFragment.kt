@@ -1,10 +1,10 @@
 package com.example.kartellderliebe
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.kartellderliebe.databinding.FragmentActsMainBinding
 import com.google.android.material.tabs.TabLayout
 
@@ -14,6 +14,7 @@ class LineUpMainFragment : Fragment(R.layout.fragment_acts_main) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        setHasOptionsMenu(true)
         val binding = FragmentActsMainBinding.inflate(inflater, container, false)
         val tabLayout = binding.tabLayout
         tabLayout.addTab(tabLayout.newTab().setText("Acts"))
@@ -39,6 +40,15 @@ class LineUpMainFragment : Fragment(R.layout.fragment_acts_main) {
             }
         })
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.overflow_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
     }
 
 

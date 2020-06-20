@@ -1,10 +1,10 @@
 package com.example.kartellderliebe
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.kartellderliebe.databinding.FragmentFestivalInfosMainBinding
 import com.google.android.material.tabs.TabLayout
 
@@ -14,6 +14,7 @@ class FestivalInfosMainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        setHasOptionsMenu(true)
         val binding = FragmentFestivalInfosMainBinding.inflate(inflater, container, false)
         val tabLayout = binding.tabLayout
         tabLayout.addTab(tabLayout.newTab().setText("Allgemein"))
@@ -42,4 +43,14 @@ class FestivalInfosMainFragment : Fragment() {
         })
         return binding.root
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.overflow_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
+    }
+
 }
