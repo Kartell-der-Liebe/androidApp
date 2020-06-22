@@ -21,11 +21,9 @@ class AllgemeinInfosFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val html = "<iframe src=\"https://google.com&output=embed\" style=\"border:solid 1px #777\" width=\"400\" height=\"500\" frameborder=\"0\" scrolling=\"no\"></iframe>"
-        // Inflate the layout for this fragment
         val binding = FragmentAllgemeinInfosBinding.inflate(inflater, container, false)
         val webView = binding.webView
-        val contentView = binding.contentView
+        val contentView = binding.textViewInfoAllgemein
         contentView.movementMethod = ScrollingMovementMethod()
 
         class MyJavaScriptInterface(aContentView: TextView) {
@@ -42,51 +40,14 @@ class AllgemeinInfosFragment : Fragment() {
         }
 
         webView.settings.javaScriptEnabled = true
-        webView.addJavascriptInterface(MyJavaScriptInterface(contentView), "INTERFACE")
+        webView.addJavascriptInterface(MyJavaScriptInterface(contentView), "INTERFACE1")
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView, url: String) {
-                view.loadUrl("javascript:window.INTERFACE.processContent(document.getElementById(\"tab-5eef502ca56e3-1\").textContent)")
+                view.loadUrl("javascript:window.INTERFACE1.processContent(document.getElementById('Content').getElementsByClassName('content_wrapper clearfix')[0].getElementsByClassName('sections_group')[0].getElementsByClassName('entry-content')[0].getElementsByClassName('section mcb-section mcb-section-mplxyfnn4')[0].getElementsByClassName('section_wrapper mcb-section-inner')[0].getElementsByClassName('wrap mcb-wrap mcb-wrap-gkw9kg93q one  valign-top clearfix')[0].getElementsByClassName('mcb-wrap-inner')[0].getElementsByClassName('column mcb-column mcb-item-s50p4zqqo one column_tabs')[0].getElementsByClassName('jq-tabs tabs_wrapper tabs_centered')[0].getElementsByTagName( 'div' )[0].innerText)")
             }
         }
 
         webView.loadUrl("https://eineliebe.de/infos/")
-
-        /*webView.webViewClient = object : WebViewClient() {
-            override fun onReceivedError(
-                view: WebView,
-                errorCode: Int,
-                description: String,
-                failingUrl: String
-            ) {
-                Toast.makeText(activity, description, Toast.LENGTH_SHORT).show()
-            }
-
-            @TargetApi(Build.VERSION_CODES.M)
-            override fun onReceivedError(
-                view: WebView,
-                req: WebResourceRequest,
-                rerr: WebResourceError
-            ) {
-                // Redirect to deprecated method, so you can use it in all SDK versions
-                onReceivedError(
-                    view,
-                    rerr.errorCode,
-                    rerr.description.toString(),
-                    req.url.toString()
-                )
-            }
-        }
-        webView.loadUrl("https://eineliebe.de/infos/")
-
-        val webSettings = webView.settings
-        webSettings.javaScriptEnabled = true
-        webSettings.javaScriptCanOpenWindowsAutomatically = true
-        webSettings.builtInZoomControls = true
-        webSettings.pluginState = WebSettings.PluginState.ON
-        webView.loadData("<iframe src=\"http://www.google.com\"></iframe>", "text/html",
-            "utf-8")*/
-
-
         return binding.root
     }
 }
