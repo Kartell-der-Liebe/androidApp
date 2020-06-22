@@ -4,7 +4,7 @@
     <FrameLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".CampingFragment">
+        tools:context=".ui.info.CampingFragment">
 
         <WebView
             android:layout_width="match_parent"

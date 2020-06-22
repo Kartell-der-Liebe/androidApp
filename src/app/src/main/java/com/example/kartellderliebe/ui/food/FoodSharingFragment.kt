@@ -1,10 +1,11 @@
-package com.example.kartellderliebe
+package com.example.kartellderliebe.ui.food
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.kartellderliebe.R
 
 class FoodSharingFragment : Fragment() {
 

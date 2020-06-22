@@ -1,10 +1,12 @@
-package com.example.kartellderliebe
+package com.example.kartellderliebe.ui.lineUp
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.kartellderliebe.R
+import com.example.kartellderliebe.tabAdapter.TabsAdapterLineUp
 import com.example.kartellderliebe.databinding.FragmentActsMainBinding
 import com.google.android.material.tabs.TabLayout
 

@@ -1,10 +1,9 @@
-package com.example.kartellderliebe
+package com.example.kartellderliebe.ui.info
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.NavigationUI
+import com.example.kartellderliebe.R
 
 class AllgemeinInfosFragment : Fragment() {
 
