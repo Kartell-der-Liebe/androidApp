@@ -1,29 +1,32 @@
-package com.example.kartellderliebe
+package com.example.kartellderliebe.ui.info
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.example.kartellderliebe.databinding.FragmentFoodMainBinding
+import com.example.kartellderliebe.R
+import com.example.kartellderliebe.tabAdapter.TabsAdapterFestivalInfos
+import com.example.kartellderliebe.databinding.FragmentFestivalInfosMainBinding
 import com.google.android.material.tabs.TabLayout
 
-class FoodMainFragment : Fragment() {
+class FestivalInfosMainFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         setHasOptionsMenu(true)
-        val binding = FragmentFoodMainBinding.inflate(inflater, container, false)
+        val binding = FragmentFestivalInfosMainBinding.inflate(inflater, container, false)
         val tabLayout = binding.tabLayout
-        tabLayout.addTab(tabLayout.newTab().setText("Foodtrucks"))
-        tabLayout.addTab(tabLayout.newTab().setText("Food Sharing"))
-        tabLayout.addTab(tabLayout.newTab().setText("Dorfladen"))
+        tabLayout.addTab(tabLayout.newTab().setText("Allgemein"))
+        tabLayout.addTab(tabLayout.newTab().setText("Anreise"))
+        tabLayout.addTab(tabLayout.newTab().setText("Camping"))
+        tabLayout.addTab(tabLayout.newTab().setText("Unter 18"))
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
         val viewPager = binding.viewPager
         val tabsAdapter = activity?.supportFragmentManager?.let {
-            TabsAdapterFood(
+            TabsAdapterFestivalInfos(
                 it,
                 tabLayout.tabCount
             )
@@ -51,4 +54,5 @@ class FoodMainFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
     }
+
 }

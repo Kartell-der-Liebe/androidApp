@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.kartellderliebe.HomeFragment"
+        android:name="com.example.kartellderliebe.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -25,24 +25,24 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.kartellderliebe.SettingsFragment"
+        android:name="com.example.kartellderliebe.ui.SettingsFragment"
         android:label="SettingsFragment" />
     <fragment
         android:id="@+id/actsMainFragment"
-        android:name="com.example.kartellderliebe.LineUpMainFragment"
+        android:name="com.example.kartellderliebe.ui.lineUp.LineUpMainFragment"
         android:label="fragment_acts_main"
         tools:layout="@layout/fragment_acts_main" />
     <fragment
         android:id="@+id/foodMainFragment"
-        android:name="com.example.kartellderliebe.FoodMainFragment"
+        android:name="com.example.kartellderliebe.ui.food.FoodMainFragment"
         android:label="FoodMainFragment" />
     <fragment
         android:id="@+id/festivalInfosMainFragment"
-        android:name="com.example.kartellderliebe.FestivalInfosMainFragment"
+        android:name="com.example.kartellderliebe.ui.info.FestivalInfosMainFragment"
         android:label="FestivalInfosMainFragment" />
     <fragment
         android:id="@+id/festivalNewsFragment"
-        android:name="com.example.kartellderliebe.FestivalNewsFragment"
+        android:name="com.example.kartellderliebe.ui.FestivalNewsFragment"
         android:label="fragment_festival_news"
         tools:layout="@layout/fragment_festival_news" />
 </navigation>
