@@ -16,6 +16,7 @@ import com.example.kartellderliebe.databinding.FragmentAllgemeinInfosBinding
 
 class AllgemeinInfosFragment : Fragment() {
 
+    private lateinit var contentView: TextView
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,7 +24,7 @@ class AllgemeinInfosFragment : Fragment() {
     ): View? {
         val binding = FragmentAllgemeinInfosBinding.inflate(inflater, container, false)
         val webView = binding.webView
-        val contentView = binding.textViewInfoAllgemein
+        contentView = binding.textViewInfoAllgemein
         contentView.movementMethod = ScrollingMovementMethod()
 
         class JavaScriptInterface(aContentView: TextView) {
@@ -33,9 +34,12 @@ class AllgemeinInfosFragment : Fragment() {
                 contentView1 = aContentView
             }
 
+            @SuppressLint("SetTextI18n")
             @JavascriptInterface
             fun processContent(aContent: String) {
-                contentView1?.post { contentView.text = aContent }
+                if(aContent != "") {
+                    contentView1?.post { contentView.text = aContent }
+                }
             }
         }
 

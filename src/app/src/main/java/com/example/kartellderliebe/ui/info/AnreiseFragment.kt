@@ -36,7 +36,9 @@ class AnreiseFragment : Fragment() {
 
             @JavascriptInterface
             fun processContent(aContent: String) {
-                contentView1?.post { contentView.text = aContent }
+                if(aContent != "") {
+                    contentView1?.post { contentView.text = aContent }
+                }
             }
         }
 
