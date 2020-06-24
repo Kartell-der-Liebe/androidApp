@@ -52,5 +52,9 @@
     <fragment
         android:id="@+id/newsFeedDetailFragment"
         android:name="com.example.kartellderliebe.ui.NewsFeedDetailFragment"
-        android:label="NewsFeedDetailFragment" />
+        android:label="NewsFeedDetailFragment" >
+        <argument
+            android:name="feedURL"
+            app:argType="string" />
+    </fragment>
 </navigation>

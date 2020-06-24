@@ -10,7 +10,9 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kartellderliebe.R
 import com.example.kartellderliebe.rss.model.RSSObject
+import com.example.kartellderliebe.ui.FestivalNewsFragmentDirections
 import com.example.kartellderliebe.ui.NewsFeedDetailFragment
+import com.example.kartellderliebe.ui.NewsFeedDetailFragmentArgs
 
 
 class FeedAdapter(var rssObject: RSSObject, var mContext : Context, var inflater: LayoutInflater? = LayoutInflater.from(mContext)) : RecyclerView.Adapter<FeedViewHolder>(){
@@ -28,16 +30,13 @@ class FeedAdapter(var rssObject: RSSObject, var mContext : Context, var inflater
     override fun onBindViewHolder(holder: FeedViewHolder, position: Int) {
         holder.txtTitle.text = rssObject.items[position].title
         holder.txtPubDate.text = rssObject.items[position].pubDate
-        holder.txtContent.text = rssObject.items[position].content
+        holder.txtContent.text = rssObject.items[position].description
 
         holder.itemClickListener = object : ItemClickListener {
             override fun onClick(view: View, position: Int, isLongClick: Boolean) {
                 if(!isLongClick){
-                    val fragment = NewsFeedDetailFragment()
-                    val bundle = Bundle()
-                    bundle.putString("Test", rssObject.items[position].toString())
-                    fragment.arguments = bundle
-                    view.findNavController().navigate(R.id.action_festivalNewsFragment_to_newsFeedDetailFragment)
+                    view.findNavController().navigate(FestivalNewsFragmentDirections.actionFestivalNewsFragmentToNewsFeedDetailFragment(rssObject.items[position].link))
+
                 }
             }
         }
