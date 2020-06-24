@@ -28,13 +28,14 @@ class FestivalNewsFragment : Fragment() {
 
     val RSS_LINK : String = "https://eineliebe.de/feed/"
     val RSS2JSONAPI : String = " https://api.rss2json.com/v1/api.json?rss_url="
+    lateinit var binding: FragmentFestivalNewsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding = FragmentFestivalNewsBinding.inflate(inflater, container, false)
+        binding = FragmentFestivalNewsBinding.inflate(inflater, container, false)
         setHasOptionsMenu(true)
 
         toolbar = binding.toolbar
@@ -63,10 +64,13 @@ class FestivalNewsFragment : Fragment() {
             }
 
             override fun onPostExecute(result: String?) {
-                rssObject = Gson().fromJson(result, RSSObject::class.java)
-                val adapter = context?.let { FeedAdapter(rssObject, it) }
-                recyclerView.adapter = adapter
-                adapter?.notifyDataSetChanged()
+                if (!result.equals("")) {
+                    rssObject = Gson().fromJson(result, RSSObject::class.java)
+                    val adapter = context?.let { FeedAdapter(rssObject, it) }
+                    recyclerView.adapter = adapter
+                    adapter?.notifyDataSetChanged()
+                    binding.newsConnectionFailedTextView.text = ""
+                }
             }
         }
         val url_get_data = StringBuilder(RSS2JSONAPI)
