@@ -18,5 +18,6 @@ data class Act (
     val name: String,
     val time: String,
     val duration: String,
+    val day: String,
     val image: String
 )

@@ -3,7 +3,7 @@
   "stage": [
     {
       "name": "DJ Zelt",
-      "time": ["1000", "1200", "1400", "1600", "1800"],
+      "time": ["1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800"],
       "header": [
         "Time",
         "Freitag",
@@ -14,12 +14,252 @@
           "name": "Alex",
           "time": "1400",
           "duration": "120",
+          "day": "Friday",
           "image": "test.jpg"
         },
         {
           "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
           "time": "1600",
           "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
           "image": "test.jpg"
         }
       ]
@@ -27,21 +267,261 @@
     {
       "name": "Main Stage",
       "header": ["Time","Freitag", "Samstag"],
-      "time": ["1000", "1200", "1400", "1600", "1800"],
+      "time": ["1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800", "1000", "1200", "1400", "1600", "1800"],
       "acts": [
         {
           "name": "Alex",
           "time": "1400",
           "duration": "120",
+          "day": "Friday",
           "image": "test.jpg"
         },
         {
           "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
           "time": "1600",
           "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1400",
+          "duration": "120",
+          "day": "Saturday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Scooter",
+          "time": "1600",
+          "duration": "120",
+          "day": "Friday",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Da Tweekaz",
+          "time": "1600",
+          "duration": "120",
+          "day": "Saturday",
           "image": "test.jpg"
         }
-        ]
+      ]
     }
   ]
 }

@@ -6,6 +6,7 @@ import android.graphics.Color.BLACK
 import android.graphics.Color.WHITE
 import android.graphics.Typeface
 import android.os.Bundle
+import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -15,6 +16,8 @@ import android.widget.ImageView
 import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
+import androidx.core.view.marginEnd
+import androidx.core.view.setPadding
 import androidx.fragment.app.Fragment
 import com.example.kartellderliebe.databinding.FragmentTimeTableBinding
 import com.example.kartellderliebe.getJsonDataFromAsset
@@ -36,6 +39,7 @@ class TimeTableFragment : Fragment() {
         jsonObject = Gson().fromJson(context?.let { getJsonDataFromAsset(it,"test.json") }, JSONObject::class.java)
 
         parseJSONContext()
+        jsonObject.stage[0].acts.sortedBy { it.time }
 
         println(jsonObject.year)
 
@@ -46,6 +50,13 @@ class TimeTableFragment : Fragment() {
     private fun parseJSONContext() {
         for (stages in jsonObject.stage){
 
+            val stageName = TextView(context)
+            stageName.textSize = 30f
+            stageName.gravity = Gravity.CENTER_HORIZONTAL
+            stageName.text = stages.name
+            stageName.setPadding(0,50,0,50)
+            binding.TimeTableLinearLayout.addView(stageName)
+
             val table = TableLayout(context)
 
             table.isStretchAllColumns = true
@@ -55,10 +66,12 @@ class TimeTableFragment : Fragment() {
             rowTitle.gravity = Gravity.CENTER_HORIZONTAL
             rowTitle.setBackgroundColor(BLACK)
 
-            val params: TableRow.LayoutParams = TableRow.LayoutParams()
+
+            val params: TableRow.LayoutParams = TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, 1)
             params.span = stages.header.lastIndex + 1
             params.height = TableRow.LayoutParams.WRAP_CONTENT
             params.width = TableRow.LayoutParams.MATCH_PARENT
+            params.setMargins(10,2,10,10)
 
             for (header in stages.header){
                 val headerText = TextView(context)
@@ -68,22 +81,33 @@ class TimeTableFragment : Fragment() {
                 headerText.textAlignment = View.TEXT_ALIGNMENT_CENTER
                 rowTitle.addView(headerText, params)
             }
+            table.addView(rowTitle)
 
-            val rowAct = TableRow(context)
-            rowAct.gravity = Gravity.CENTER_HORIZONTAL
-            rowAct.setBackgroundColor(WHITE)
-
-            for (act in stages.acts){
+            for (x in stages.acts.indices step 2) {
+                val rowAct = TableRow(context)
+                rowAct.setPadding(0,0,0,30)
+                rowAct.gravity = Gravity.CENTER_HORIZONTAL
+                rowAct.setBackgroundColor(WHITE)
+                val actTime = TextView(context)
+                actTime.text = stages.time[x/2]
+                actTime.setTextColor(BLACK)
+                actTime.textSize = 16.0F
+                actTime.textAlignment = View.TEXT_ALIGNMENT_CENTER
                 val actText = TextView(context)
-                actText.text = act.name
+                actText.text = stages.acts[x].name
                 actText.setTextColor(BLACK)
                 actText.textSize = 16.0F
                 actText.textAlignment = View.TEXT_ALIGNMENT_CENTER
+                val actText2 = TextView(context)
+                actText2.text = stages.acts[x+1].name
+                actText2.setTextColor(BLACK)
+                actText2.textSize = 16.0F
+                actText2.textAlignment = View.TEXT_ALIGNMENT_CENTER
+                rowAct.addView(actTime, params)
                 rowAct.addView(actText, params)
+                rowAct.addView(actText2, params)
+                table.addView(rowAct)
             }
-
-            table.addView(rowTitle)
-            table.addView(rowAct)
 
             binding.TimeTableLinearLayout.addView(table)
         }
