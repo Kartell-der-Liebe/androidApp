@@ -2,15 +2,21 @@ package com.example.kartellderliebe.json.lineUp
 
 import com.google.gson.Gson
 
-data class Address(
-    var city: String? = null,
-    var post: String? = null) {
+data class JSONObject (
+    val year: String,
+    val stage: List<Stage>
+)
 
-}
+data class Stage (
+    val name: String,
+    val time: List<String>,
+    val header: List<String>,
+    val acts: List<Act>
+)
 
-data class Student(
-    var name: String? = null,
-    var address: Address? = null) {
-}
-
-val student = Gson().fromJson<Student>("../test.json", Student::class.java)
+data class Act (
+    val name: String,
+    val time: String,
+    val duration: String,
+    val image: String
+)

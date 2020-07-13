@@ -1,0 +1,46 @@
+{
+  "year": "2021",
+  "stage": [
+    {
+      "name": "DJ Zelt",
+      "time": ["1000", "1200", "1400", "1600", "1800"],
+      "header": [
+        "Freitag",
+        "Samstag"
+      ],
+      "acts": [
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1600",
+          "duration": "120",
+          "image": "test.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Main Stage",
+      "header": ["Freitag", "Samstag"],
+      "time": ["1000", "1200", "1400", "1600", "1800"],
+      "acts": [
+        {
+          "name": "Alex",
+          "time": "1400",
+          "duration": "120",
+          "image": "test.jpg"
+        },
+        {
+          "name": "Björn",
+          "time": "1600",
+          "duration": "120",
+          "image": "test.jpg"
+        }
+        ]
+    }
+  ]
+}

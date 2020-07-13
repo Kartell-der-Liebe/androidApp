@@ -59,7 +59,6 @@ class FestivalNewsFragment : Fragment() {
                 val result : String
                 val http = HTTPDataHandler()
                 result = params[0]?.let { http.getHTTPData(it) }.toString()
-                println(result + "Hello")
                 return result
             }
 
