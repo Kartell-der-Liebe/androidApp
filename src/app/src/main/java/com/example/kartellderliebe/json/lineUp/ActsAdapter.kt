@@ -28,14 +28,14 @@ class ActsAdapter(var jsonObject: JSONObject, var mContext : Context, var inflat
     }
 
     override fun getItemCount(): Int {
-        return jsonObject.stage[0].acts.size
+        return jsonObject.acts.size
     }
 
     override fun onBindViewHolder(
         holder: ActsHolder,
         position: Int
     ) {
-        holder.actsTextView.text = jsonObject.stage[0].acts[position].name
+        holder.actsTextView.text = jsonObject.acts[position].name
         holder.actsTextView.background = ContextCompat.getDrawable(mContext, R.drawable.ic_launcher_background)
     }
 

@@ -39,7 +39,7 @@ class TimeTableFragment : Fragment() {
         jsonObject = Gson().fromJson(context?.let { getJsonDataFromAsset(it,"test.json") }, JSONObject::class.java)
 
         parseJSONContext()
-        jsonObject.stage[0].acts.sortedBy { it.time }
+        jsonObject.acts.sortedBy { it.time }
 
         println(jsonObject.year)
 
@@ -63,12 +63,12 @@ class TimeTableFragment : Fragment() {
             table.isShrinkAllColumns = true
 
             val rowTitle = TableRow(context)
-            rowTitle.gravity = Gravity.CENTER_HORIZONTAL
+            //rowTitle.gravity = Gravity.CENTER_HORIZONTAL
             rowTitle.setBackgroundColor(BLACK)
 
 
             val params: TableRow.LayoutParams = TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT)
-            params.span = stages.header.lastIndex - 1
+            params.span = stages.header.lastIndex
             params.height = TableRow.LayoutParams.WRAP_CONTENT
             params.width = TableRow.LayoutParams.MATCH_PARENT
 
@@ -78,26 +78,26 @@ class TimeTableFragment : Fragment() {
                 headerText.setTextColor(WHITE)
                 headerText.textSize = 24.0F
                 headerText.textAlignment = View.TEXT_ALIGNMENT_CENTER
-                rowTitle.addView(headerText, params)
+                rowTitle.addView(headerText)
             }
             table.addView(rowTitle)
 
-            for (x in stages.acts.indices step params.span + 1) {
+            for (x in jsonObject.acts.indices step params.span) {
                 val rowAct = TableRow(context)
                 rowAct.setPadding(0,0,0,30)
                 rowAct.gravity = Gravity.CENTER_HORIZONTAL
                 rowAct.setBackgroundColor(WHITE)
 
                 val actTime = TextView(context)
-                actTime.text = stages.time[x/params.span + 1]
+                actTime.text = stages.time[x/params.span]
                 actTime.setTextColor(BLACK)
                 actTime.textSize = 16.0F
                 actTime.textAlignment = View.TEXT_ALIGNMENT_CENTER
-                rowAct.addView(actTime, params)
+                rowAct.addView(actTime)
 
-                for (i in 0 until params.span + 1){
+                for (i in 0 until params.span){
                     val actText = TextView(context)
-                    actText.text = stages.acts[x + i].name
+                    actText.text = jsonObject.acts[x + i].name
                     actText.setTextColor(BLACK)
                     actText.textSize = 16.0F
                     actText.textAlignment = View.TEXT_ALIGNMENT_CENTER
