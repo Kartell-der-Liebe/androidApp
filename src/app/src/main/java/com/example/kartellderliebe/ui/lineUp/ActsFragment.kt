@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kartellderliebe.R
 import com.example.kartellderliebe.databinding.FragmentActsBinding
@@ -16,7 +17,7 @@ import kotlinx.android.synthetic.main.fragment_acts.*
 
 class ActsFragment : Fragment() {
 
-    private lateinit var linearLayoutManager: LinearLayoutManager
+    private lateinit var gridLayoutManager: GridLayoutManager
 
 
     override fun onCreateView(
@@ -25,10 +26,10 @@ class ActsFragment : Fragment() {
     ): View? {
 
         val binding = FragmentActsBinding.inflate(inflater, container, false)
-        linearLayoutManager = LinearLayoutManager(context)
+        gridLayoutManager = GridLayoutManager(context, 2)
         val jsonObject = Gson().fromJson(context?.let { getJsonDataFromAsset(it,"test.json") }, JSONObject::class.java)
         val recyclerViewActs = binding.recyclerViewActs
-        recyclerViewActs.layoutManager = linearLayoutManager
+        recyclerViewActs.layoutManager = gridLayoutManager
         val adapter = context?.let { ActsAdapter(jsonObject, it) }
         recyclerViewActs.adapter = adapter
         adapter?.notifyDataSetChanged()

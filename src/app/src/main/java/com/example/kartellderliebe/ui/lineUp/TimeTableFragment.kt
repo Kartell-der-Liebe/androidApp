@@ -67,11 +67,10 @@ class TimeTableFragment : Fragment() {
             rowTitle.setBackgroundColor(BLACK)
 
 
-            val params: TableRow.LayoutParams = TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, 1)
-            params.span = stages.header.lastIndex + 1
+            val params: TableRow.LayoutParams = TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT)
+            params.span = stages.header.lastIndex - 1
             params.height = TableRow.LayoutParams.WRAP_CONTENT
             params.width = TableRow.LayoutParams.MATCH_PARENT
-            params.setMargins(10,2,10,10)
 
             for (header in stages.header){
                 val headerText = TextView(context)
@@ -83,29 +82,28 @@ class TimeTableFragment : Fragment() {
             }
             table.addView(rowTitle)
 
-            for (x in stages.acts.indices step 2) {
+            for (x in stages.acts.indices step params.span + 1) {
                 val rowAct = TableRow(context)
                 rowAct.setPadding(0,0,0,30)
                 rowAct.gravity = Gravity.CENTER_HORIZONTAL
                 rowAct.setBackgroundColor(WHITE)
+
                 val actTime = TextView(context)
-                actTime.text = stages.time[x/2]
+                actTime.text = stages.time[x/params.span + 1]
                 actTime.setTextColor(BLACK)
                 actTime.textSize = 16.0F
                 actTime.textAlignment = View.TEXT_ALIGNMENT_CENTER
-                val actText = TextView(context)
-                actText.text = stages.acts[x].name
-                actText.setTextColor(BLACK)
-                actText.textSize = 16.0F
-                actText.textAlignment = View.TEXT_ALIGNMENT_CENTER
-                val actText2 = TextView(context)
-                actText2.text = stages.acts[x+1].name
-                actText2.setTextColor(BLACK)
-                actText2.textSize = 16.0F
-                actText2.textAlignment = View.TEXT_ALIGNMENT_CENTER
                 rowAct.addView(actTime, params)
-                rowAct.addView(actText, params)
-                rowAct.addView(actText2, params)
+
+                for (i in 0 until params.span + 1){
+                    val actText = TextView(context)
+                    actText.text = stages.acts[x + i].name
+                    actText.setTextColor(BLACK)
+                    actText.textSize = 16.0F
+                    actText.textAlignment = View.TEXT_ALIGNMENT_CENTER
+                    rowAct.addView(actText)
+                }
+
                 table.addView(rowAct)
             }
 

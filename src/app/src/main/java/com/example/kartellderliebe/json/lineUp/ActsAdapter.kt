@@ -1,6 +1,7 @@
 package com.example.kartellderliebe.json.lineUp
 
 import android.content.Context
+import android.graphics.Bitmap
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.view.menu.ActionMenuItemView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kartellderliebe.R
 import com.example.kartellderliebe.getJsonDataFromAsset
@@ -33,37 +35,9 @@ class ActsAdapter(var jsonObject: JSONObject, var mContext : Context, var inflat
         holder: ActsHolder,
         position: Int
     ) {
-        Picasso.get().load(getJsonDataFromAsset(mContext, jsonObject.stage[0].acts[position].image)).into(holder.actImage)
-        holder.actsDate.text = jsonObject.stage[0].acts[position].time
-        holder.actsDescription.text = jsonObject.stage[0].acts[position].name
+        holder.actsTextView.text = jsonObject.stage[0].acts[position].name
+        holder.actsTextView.background = ContextCompat.getDrawable(mContext, R.drawable.ic_launcher_background)
     }
 
 
-}
-
-//1
-class ActsHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener, View.OnLongClickListener {
-    //2
-    var actImage : ImageView = itemView.findViewById(R.id.itemImage)
-    var actsDate : TextView = itemView.findViewById(R.id.itemDate)
-    var actsDescription : TextView = itemView.findViewById(R.id.itemDescription)
-    lateinit var itemClickListener: ItemClickListener
-
-    //3
-    init {
-        itemView.setOnClickListener(this)
-        itemView.setOnLongClickListener(this)
-    }
-
-    //4
-    override fun onClick(v: View) {
-        itemClickListener.onClick(v, adapterPosition, false)
-    }
-
-    override fun onLongClick(v: View?): Boolean {
-        if (v != null) {
-            itemClickListener.onClick(v, adapterPosition, true)
-        }
-        return true
-    }
 }
