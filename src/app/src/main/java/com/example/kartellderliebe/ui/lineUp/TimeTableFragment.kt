@@ -66,12 +66,6 @@ class TimeTableFragment : Fragment() {
             //rowTitle.gravity = Gravity.CENTER_HORIZONTAL
             rowTitle.setBackgroundColor(BLACK)
 
-
-            val params: TableRow.LayoutParams = TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT)
-            params.span = stages.header.lastIndex
-            params.height = TableRow.LayoutParams.WRAP_CONTENT
-            params.width = TableRow.LayoutParams.MATCH_PARENT
-
             for (header in stages.header){
                 val headerText = TextView(context)
                 headerText.text = header
@@ -82,26 +76,29 @@ class TimeTableFragment : Fragment() {
             }
             table.addView(rowTitle)
 
-            for (x in jsonObject.acts.indices step params.span) {
+            for (time in stages.time) {
                 val rowAct = TableRow(context)
                 rowAct.setPadding(0,0,0,30)
                 rowAct.gravity = Gravity.CENTER_HORIZONTAL
                 rowAct.setBackgroundColor(WHITE)
 
                 val actTime = TextView(context)
-                actTime.text = stages.time[x/params.span]
+                actTime.text = time
                 actTime.setTextColor(BLACK)
                 actTime.textSize = 16.0F
                 actTime.textAlignment = View.TEXT_ALIGNMENT_CENTER
                 rowAct.addView(actTime)
 
-                for (i in 0 until params.span){
-                    val actText = TextView(context)
-                    actText.text = jsonObject.acts[x + i].name
-                    actText.setTextColor(BLACK)
-                    actText.textSize = 16.0F
-                    actText.textAlignment = View.TEXT_ALIGNMENT_CENTER
-                    rowAct.addView(actText)
+                for (act in jsonObject.acts){
+
+                    if(act.stage == stages.name && act.time == actTime.text) {
+                        val actText = TextView(context)
+                        actText.text = act.name
+                        actText.setTextColor(BLACK)
+                        actText.textSize = 16.0F
+                        actText.textAlignment = View.TEXT_ALIGNMENT_CENTER
+                        rowAct.addView(actText)
+                    }
                 }
 
                 table.addView(rowAct)

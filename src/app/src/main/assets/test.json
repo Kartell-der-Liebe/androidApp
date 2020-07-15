@@ -35,6 +35,14 @@
         "image": "background.jpeg"
       },
       {
+        "name": "Babsi",
+        "time": "1400",
+        "stage": "DJ Zelt",
+        "duration": "120",
+        "day": "Saturday",
+        "image": "background.jpeg"
+      },
+      {
         "name": "Scooter",
         "time": "1600",
         "stage": "DJ Zelt",
@@ -44,6 +52,14 @@
       },
       {
         "name": "Da Tweekaz",
+        "time": "1600",
+        "stage": "DJ Zelt",
+        "duration": "120",
+        "day": "Saturday",
+        "image": "background.jpeg"
+      },
+      {
+        "name": "Jojo",
         "time": "1600",
         "stage": "DJ Zelt",
         "duration": "120",
@@ -67,52 +83,84 @@
         "image": "background.jpeg"
       },
       {
-        "name": "Alex",
-        "time": "1400",
-        "stage": "Main Stage",
-        "duration": "120",
-        "day": "Friday",
-        "image": "background.jpeg"
-      },
-      {
-        "name": "Björn",
-        "time": "1400",
-        "stage": "Main Stage",
-        "duration": "120",
-        "day": "Saturday",
-        "image": "background.jpeg"
-      },
-      {
-        "name": "Scooter",
-        "time": "1600",
-        "stage": "Main Stage",
-        "duration": "120",
-        "day": "Friday",
-        "image": "background.jpeg"
-      },
-      {
-        "name": "Da Tweekaz",
-        "time": "1600",
-        "stage": "Main Stage",
-        "duration": "120",
-        "day": "Saturday",
-        "image": "background.jpeg"
-      },
-      {
-        "name": "Martin Garrix",
+        "name": "Sebi",
         "time": "1800",
-        "stage": "Main Stage",
-        "duration": "120",
-        "day": "Friday",
-        "image": "background.jpeg"
-      },
-      {
-        "name": "W&W",
-        "time": "1800",
-        "stage": "Main Stage",
+        "stage": "DJ Zelt",
         "duration": "120",
         "day": "Saturday",
         "image": "background.jpeg"
-      }
+      },
+    {
+      "name": "Alex",
+      "time": "1400",
+      "stage": "Main Stage",
+      "duration": "120",
+      "day": "Friday",
+      "image": "background.jpeg"
+    },
+    {
+      "name": "Björn",
+      "time": "1400",
+      "stage": "Main Stage",
+      "duration": "120",
+      "day": "Saturday",
+      "image": "background.jpeg"
+    },
+    {
+      "name": "Babsi",
+      "time": "1400",
+      "stage": "Main Stage",
+      "duration": "120",
+      "day": "Saturday",
+      "image": "background.jpeg"
+    },
+    {
+      "name": "Scooter",
+      "time": "1600",
+      "stage": "Main Stage",
+      "duration": "120",
+      "day": "Friday",
+      "image": "background.jpeg"
+    },
+    {
+      "name": "Da Tweekaz",
+      "time": "1600",
+      "stage": "Main Stage",
+      "duration": "120",
+      "day": "Saturday",
+      "image": "background.jpeg"
+    },
+    {
+      "name": "Jojo",
+      "time": "1600",
+      "stage": "Main Stage",
+      "duration": "120",
+      "day": "Saturday",
+      "image": "background.jpeg"
+    },
+    {
+      "name": "Martin Garrix",
+      "time": "1800",
+      "stage": "Main Stage",
+      "duration": "120",
+      "day": "Friday",
+      "image": "background.jpeg"
+    },
+    {
+      "name": "W&W",
+      "time": "1800",
+      "stage": "Main Stage",
+      "duration": "120",
+      "day": "Saturday",
+      "image": "background.jpeg"
+    },
+    {
+      "name": "Sebi",
+      "time": "1800",
+      "stage": "Main Stage",
+      "duration": "120",
+      "day": "Saturday",
+      "image": "background.jpeg"
+    }
   ]
 }
