@@ -7,20 +7,19 @@
       "header": [
         "Time",
         "Freitag",
-        "Samstag",
-        "Sonntag"
+        "Samstag"
       ]
     },
     {
       "name": "Main Stage",
-      "header": ["Time","Freitag", "Samstag", "Sonntag"],
-      "time": ["1000", "1200", "1400", "1600", "1800"]
+      "header": ["Time","Freitag", "Samstag"],
+      "time": ["1000", "1300", "1430", "1600", "1800"]
     }
   ],
   "acts": [
       {
         "name": "Alex",
-        "time": "1400",
+        "time": "1300",
         "stage": "DJ Zelt",
         "duration": "120",
         "day": "Friday",
@@ -28,7 +27,7 @@
       },
       {
         "name": "Björn",
-        "time": "1400",
+        "time": "1430",
         "stage": "DJ Zelt",
         "duration": "120",
         "day": "Saturday",
@@ -100,7 +99,7 @@
     },
     {
       "name": "Björn",
-      "time": "1400",
+      "time": "1430",
       "stage": "Main Stage",
       "duration": "120",
       "day": "Saturday",
@@ -108,7 +107,7 @@
     },
     {
       "name": "Babsi",
-      "time": "1400",
+      "time": "1300",
       "stage": "Main Stage",
       "duration": "120",
       "day": "Saturday",
