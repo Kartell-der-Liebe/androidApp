@@ -19,7 +19,7 @@
                 android:layout_height="match_parent"
                 android:layout_columnWeight="1">
                 <Button
-                    android:id="@+id/button1"
+                    android:id="@+id/TextViewLineUp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -32,7 +32,7 @@
                 android:layout_height="match_parent"
                 android:layout_columnWeight="1">
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/TextViewFood"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:layout_margin="4dp"
@@ -45,7 +45,7 @@
                 android:layout_height="match_parent"
                 android:layout_columnWeight="1">
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/TextViewNews"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -58,7 +58,7 @@
                 android:layout_height="match_parent"
                 android:layout_columnWeight="1">
                 <Button
-                    android:id="@+id/button4"
+                    android:id="@+id/TextViewInfos"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:layout_margin="4dp"
