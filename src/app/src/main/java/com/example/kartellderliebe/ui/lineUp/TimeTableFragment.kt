@@ -1,23 +1,15 @@
 package com.example.kartellderliebe.ui.lineUp
 
-import android.R
-import android.graphics.Color
 import android.graphics.Color.BLACK
 import android.graphics.Color.WHITE
-import android.graphics.Typeface
 import android.os.Bundle
-import android.util.AttributeSet
-import android.util.TypedValue
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
-import androidx.core.view.marginEnd
-import androidx.core.view.setPadding
 import androidx.fragment.app.Fragment
 import com.example.kartellderliebe.databinding.FragmentTimeTableBinding
 import com.example.kartellderliebe.getJsonDataFromAsset
