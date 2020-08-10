@@ -1,108 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/textView2"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="DJ Zelt"
-        android:textAlignment="center"
-        android:textSize="12pt"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:background="#3d455b"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
-
-        <TableLayout
-            android:id="@+id/table_main"
-            android:layout_width="match_parent"
+        <ScrollView
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="#FFFF"
-            android:padding="10px">
+            android:layout_alignParentStart="true"
+            android:background="#3d455b"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-            <TableRow
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:background="#000000">
+                android:layout_height="wrap_content"
+                android:id="@+id/TimeTableLinearLayout"
+                android:orientation="vertical" />
 
-                <TextView
-                    android:id="@+id/tblTime"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="Time"
-                    android:textColor="#FFFF"
-                    android:textSize="10pt" />
-
-                <TextView
-                    android:id="@+id/tblDay10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="Friday"
-                    android:textColor="#FFFF"
-                    android:textSize="10pt" />
-
-                <TextView
-                    android:id="@+id/tblDay20"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:text="Saturday"
-                    android:textColor="#FFFF"
-                    android:textSize="10pt" />
-
-                <TextView
-                    android:id="@+id/tblDay30"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="Sunday"
-                    android:textColor="#FFFF"
-                    android:textSize="10pt" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#FFFFFF">
-
-                <TextView
-                    android:id="@+id/tblDay11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10px"
-                    android:text="16:00"
-                    android:textColor="#000000" />
-
-                <TextView
-                    android:id="@+id/tblDay21"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10px"
-                    android:text="Scooter"
-                    android:textColor="#000000" />
-
-                <TextView
-                    android:id="@+id/tblDay31"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10px"
-                    android:text="..."
-                    android:textColor="#000000" />
-            </TableRow>
-
-        </TableLayout>
-
-    </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

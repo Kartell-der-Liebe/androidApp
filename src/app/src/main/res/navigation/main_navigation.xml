@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.kartellderliebe.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/home" >
+        <action
+            android:id="@+id/action_homeFragment_to_actsMainFragment"
+            app:destination="@id/actsMainFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_foodMainFragment"
+            app:destination="@id/foodMainFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_festivalInfosMainFragment"
+            app:destination="@id/festivalInfosMainFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_festivalNewsFragment"
+            app:destination="@id/festivalNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.kartellderliebe.ui.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/actsMainFragment"
+        android:name="com.example.kartellderliebe.ui.lineUp.LineUpMainFragment"
+        android:label="fragment_acts_main"
+        tools:layout="@layout/fragment_acts_main" />
+    <fragment
+        android:id="@+id/foodMainFragment"
+        android:name="com.example.kartellderliebe.ui.food.FoodMainFragment"
+        android:label="FoodMainFragment" />
+    <fragment
+        android:id="@+id/festivalInfosMainFragment"
+        android:name="com.example.kartellderliebe.ui.info.FestivalInfosMainFragment"
+        android:label="FestivalInfosMainFragment" />
+    <fragment
+        android:id="@+id/festivalNewsFragment"
+        android:name="com.example.kartellderliebe.ui.FestivalNewsFragment"
+        android:label="fragment_festival_news"
+        tools:layout="@layout/fragment_festival_news" >
+        <action
+            android:id="@+id/action_festivalNewsFragment_to_newsFeedDetailFragment"
+            app:destination="@id/newsFeedDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFeedDetailFragment"
+        android:name="com.example.kartellderliebe.ui.NewsFeedDetailFragment"
+        android:label="NewsFeedDetailFragment" >
+        <argument
+            android:name="feedURL"
+            app:argType="string" />
+    </fragment>
+</navigation>

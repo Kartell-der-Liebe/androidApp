@@ -4,15 +4,15 @@
         android:id="@+id/homeFragment"
         android:title="Home" />
     <item
-        android:id="@+id/lineUpFragment2"
+        android:id="@+id/actsMainFragment"
         android:title="Line Up" />
     <item
-        android:id="@+id/foodFragment2"
+        android:id="@+id/foodMainFragment"
         android:title="Food" />
     <item
-        android:id="@+id/festivalNewsFragment2"
+        android:id="@+id/festivalNewsFragment"
         android:title="Festival News" />
     <item
-        android:id="@+id/festivalInfosFragment2"
+        android:id="@+id/festivalInfosMainFragment"
         android:title="Festival Infos" />
 </menu>
