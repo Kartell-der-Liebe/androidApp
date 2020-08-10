@@ -23,10 +23,10 @@ class HomeFragment : Fragment() {
         binding.TextViewFood.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_homeFragment_to_foodMainFragment)
         }
-        binding.TextViewFestivalNews.setOnClickListener { view: View ->
+        binding.TextViewNews.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_homeFragment_to_festivalNewsFragment)
         }
-        binding.TextViewFestivalInfos.setOnClickListener { view: View ->
+        binding.TextViewInfos.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_homeFragment_to_festivalInfosMainFragment)
         }
         return binding.root
