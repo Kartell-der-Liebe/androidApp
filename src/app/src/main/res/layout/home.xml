@@ -15,59 +15,92 @@
             android:columnCount="1"
             android:orientation="horizontal">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="180dp"
                 android:layout_columnWeight="1">
 
-                <Button
+                <ImageView
                     android:id="@+id/TextViewLineUp"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:background="@drawable/ic_launcher_background"
+                    android:src="@drawable/lineup_pic_1"
+                    android:scaleType="centerCrop"
+                    android:layout_centerInParent="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Line Up" />
-            </LinearLayout>
+                    android:textSize="40dp"
+                    android:text="LINE UP" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="180dp"
                 android:layout_columnWeight="1">
-                <Button
+
+                <ImageView
                     android:id="@+id/TextViewFood"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:layout_margin="4dp"
-                    android:background="@drawable/ic_launcher_background"
-                    android:text="Food" />
-            </LinearLayout>
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/food_pic_1"
+                    android:scaleType="centerCrop"
+                    android:layout_centerInParent="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="40dp"
+                    android:text="FOOD" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="180dp"
                 android:layout_columnWeight="1">
-                <Button
+
+                <ImageView
                     android:id="@+id/TextViewNews"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:background="@drawable/ic_launcher_background"
-                    android:text="News" />
-            </LinearLayout>
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/news_pic_1"
+                    android:scaleType="centerCrop"
+                    android:layout_centerInParent="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="40dp"
+                    android:text="NEWS" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="180dp"
                 android:layout_columnWeight="1">
-                <Button
+
+                <ImageView
                     android:id="@+id/TextViewInfos"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:layout_margin="4dp"
-                    android:background="@drawable/ic_launcher_background"
-                    android:text="Infos" />
-            </LinearLayout>
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/info_pic_1"
+                    android:scaleType="centerCrop"
+                    android:layout_centerInParent="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="40dp"
+                    android:text="INFOS" />
+            </RelativeLayout>
 
         </GridLayout>
 
