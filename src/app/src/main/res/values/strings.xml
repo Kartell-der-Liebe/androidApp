@@ -28,13 +28,10 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     
-    <string name="allgemeineInformationenÜberschrift1" >ALLGEMEINE INFORMATIONEN\n</string>
-    <string name="allgemeineInformationenText1">Das Kartell der Liebe, entstanden aus dem „No Stress"-Gedanken, steht für eine Null-Toleranz-Einstellung gegenüber jedweder körperlichen oder psychischen Aggression, respektlosen Verhalten oder groben Verstößen gegen die Regeln unseres Festivals. Wir wollen zusammen mit allen Festivalbesuchern bei EINE LIEBE eine positive Atmosphäre schaffen, die sich gegen Hass, Rassismus, Sexismus, Homophobie und anderweitige Ressentiments und Ausgrenzung stellt. Auch appellieren wir an dieser Stelle an unsere Verbundenheit zur Natur: Bitte achtet auf dieses wunderschöne Fleckchen, das wir für unser Festival auserkoren haben. Macht nichts kaputt und werft vor allem keinen Müll oder Sonstiges in die Bachläufe, Wälder und Felder.\n\”
-
+    <string name="allgemeineInformationenÜberschrift1" >ALLGEMEINE INFORMATIONEN</string>
+    <string name="allgemeineInformationenText1">Das Kartell der Liebe, entstanden aus dem No Stress-Gedanken, steht für eine Null-Toleranz-Einstellung gegenüber jedweder körperlichen oder psychischen Aggression, respektlosen Verhalten oder groben Verstößen gegen die Regeln unseres Festivals. Wir wollen zusammen mit allen Festivalbesuchern bei EINE LIEBE eine positive Atmosphäre schaffen, die sich gegen Hass, Rassismus, Sexismus, Homophobie und anderweitige Ressentiments und Ausgrenzung stellt. Auch appellieren wir an dieser Stelle an unsere Verbundenheit zur Natur: Bitte achtet auf dieses wunderschöne Fleckchen, das wir für unser Festival auserkoren haben. Macht nichts kaputt und werft vor allem keinen Müll oder Sonstiges in die Bachläufe, Wälder und Felder.\n\n
 Um gemeinsam ein unvergleichliches und stressfreies Festival-Wochenende zu haben, gilt während der gesamten Veranstaltung unsere Hausordnung. Die Hausordnung und das Sicherheitskonzept wurde gemeinsam mit der Polizei, der Feuerwehr, dem Sanitätsdienst, der Gemeinde Herdwangen-Schönach und dem Landratsamt erstellt, um uns allen ein friedliches und sicheres Festival zu ermöglichen.\n\n
-
 Manche Dinge mögen Euch vielleicht etwas unentspannt, geradezu „kommerziell“ vorkommen, doch gibt es für diese Regeln und Vorgaben ganz bestimmte Gründe: Seit einiger Zeit merken wir alle mehr und mehr, dass die Welt eine andere geworden ist und zu Recht die wichtigste Frage lautet: „Was tut ein Veranstalter für die Sicherheit der Besucher?“ Diese Sicherheit steht für uns an erster Stelle!\n\n
-
 Das Sicherheitskonzept bedeutet jedoch leider nicht nur Konsequenzen und Zugeständnisse für uns als Organisatoren, sondern auch für Euch als Besucher. Wir haben uns nach langen Beratungen und unter Abwägung aller Optionen zusammen mit den zuständigen Behörden zu diesen Regelungen entschlossen, um diese gemeinsam mit Euch umzusetzen. Zu Beginn besonders hervorzuheben ist die Anwendung des Jugendschutzgesetzes (JuSchG), welches ihr weiter unten findet und genauso die Anwendung des Betäubungsmittelgesetzes (BtMG).</string>
     <string name="allgemeineInformationenÜberschrift2">FINGER WEG VON DROGEN\n</string>
     <string name="allgemeineInformationenText2">Besitz, Handel und Konsum von Betäubungsmitteln ist für alle Besucher von EINE LIEBE auf dem gesamten Camping- und Veranstaltungsgelände ausdrücklich verboten. Zuwiderhandlungen führen zum Ausschluss vom Festival sowie zur Benachrichtigung der Polizei. Bei Jugendlichen unter 18 Jahren erfolgt unverzüglich die Benachrichtigung der Erziehungsberechtigten.</string>
@@ -45,8 +42,8 @@ Das Sicherheitskonzept bedeutet jedoch leider nicht nur Konsequenzen und Zugest�
     <string name="anreiseInformationenÜberschrift1">Anreise\n</string>
     <string name="anreiseInformationenÜberschrift2">MIT DEM AUTO\n</string>
     <string name="anreiseInformationenText1">Bitte achtet im Vorfeld Eurer Anreise auf alle aktuellen Anfahrtshinweise, die wir über unsere EINE LIEBE Facebookseite und E-Mail kommunizieren. Vor Ort ist die Verkehrs- und die Festivalbeschilderung zu beachten. Von uns abgesperrte Straßen sind vor allem aus Sicherheitsgründen als Rettungswege wichtig für unser gemeinsames Festival, eine Anreise ist nur über die ausgeschilderte Zufahrt möglich. Schleichwege bringen Euch und uns gar nichts. Wir wollen Euch nicht ärgern, sondern dafür sorgen, dass Ihr schnell und sicher beim EINE LIEBE ankommt. Helft uns dabei!\n\n
-
-        Die Parkplatz-Zufahrt befindet sich auf der L195 von Herdwangen in Richtung Überlingen/Owingen, ca. 800m vom Ortsausgang Vorstadt entfernt. Am besten ihr gebt in eurem Navi folgende Adresse ein und folgt von dort aus der Beschilderung:\n\n
+</string>
+    <string name="anreiseInformationenText4">Die Parkplatz-Zufahrt befindet sich auf der L195 von Herdwangen in Richtung Überlingen/Owingen, ca. 800m vom Ortsausgang Vorstadt entfernt. Am besten ihr gebt in eurem Navi folgende Adresse ein und folgt von dort aus der Beschilderung:\n\n
 
         Bodenseestraße\n
         88634 Herdwangen-Schönach\n\n

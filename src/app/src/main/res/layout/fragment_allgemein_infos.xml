@@ -15,30 +15,60 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/EL2020SchriftDunkel"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="35dp"
                     android:text="@string/allgemeineInformationenÜberschrift1"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/EL2020SchriftDunkel"
+                    android:padding="25dp"
                     android:text="@string/allgemeineInformationenText1"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/EL2020SchriftDunkel"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="35dp"
                     android:text="@string/allgemeineInformationenÜberschrift2"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/EL2020SchriftDunkel"
+                    android:padding="25dp"
                     android:text="@string/allgemeineInformationenText2"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/EL2020SchriftDunkel"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="35dp"
                     android:text="@string/allgemeineInformationenÜberschrift3"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/EL2020SchriftDunkel"
+                    android:padding="25dp"
                     android:text="@string/allgemeineInformationenText3"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/EL2020SchriftDunkel"
+                    android:padding="25dp"
                     android:text="@string/allgemeineInformationenText4"/>
             </LinearLayout>
         </ScrollView>

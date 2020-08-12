@@ -23,22 +23,24 @@
                     android:layout_height="180dp"
                     android:layout_columnWeight="1">
 
-                    <ImageView
-                        android:id="@+id/TextViewLineUp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/lineup_pic_1" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="LINE UP"
-                        android:textSize="40dp" />
-                </RelativeLayout>
+                <ImageView
+                    android:id="@+id/TextViewLineUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/lineup_pic_1"
+                    android:scaleType="centerCrop"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="4dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="40dp"
+                    android:text="LINE UP"
+                    android:textColor="@color/EL2020SchriftDunkel" />
+            </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="0dp"
@@ -52,7 +54,8 @@
                         android:layout_centerInParent="true"
                         android:layout_marginTop="4dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/food_pic_1" />
+                        android:src="@drawable/food_pic_3"
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -60,7 +63,8 @@
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/poppins_semibold"
                         android:text="FOOD"
-                        android:textSize="40dp" />
+                        android:textSize="40dp"
+                        android:textColor="@color/EL2020SchriftDunkel" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -75,7 +79,8 @@
                         android:layout_centerInParent="true"
                         android:layout_marginTop="4dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/news_pic_1" />
+                        android:src="@drawable/news_pic_1"
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -83,7 +88,8 @@
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/poppins_semibold"
                         android:text="NEWS"
-                        android:textSize="40dp" />
+                        android:textSize="40dp"
+                        android:textColor="@color/EL2020SchriftDunkel" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -106,7 +112,8 @@
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/poppins_semibold"
                         android:text="INFOS"
-                        android:textSize="40dp" />
+                        android:textSize="40dp"
+                        android:textColor="@color/EL2020SchriftDunkel" />
                 </RelativeLayout>
 
             </GridLayout>
