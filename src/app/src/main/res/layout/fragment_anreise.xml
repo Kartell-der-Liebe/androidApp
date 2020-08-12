@@ -9,22 +9,36 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:ignore="WebViewLayout">
-
-            <WebView
-                android:id="@+id/webView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                tools:ignore="Suspicious0dp">
-
-            </WebView>
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textViewInfoAnreise"
-                android:text="Connection Failed!"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:text="@string/anreiseInformationenÜberschrift1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anreiseInformationenText1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anreiseInformationenÜberschrift2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anreiseInformationenText2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anreiseInformationenÜberschrift3"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anreiseInformationenText3"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anreiseInformationenÜberschrift4"/>
         </LinearLayout>
     </ScrollView>
 </layout>

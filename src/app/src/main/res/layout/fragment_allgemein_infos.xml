@@ -12,19 +12,34 @@
                 android:orientation="vertical"
                 tools:ignore="WebViewLayout">
 
-                <WebView
-                    android:id="@+id/webView"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    tools:ignore="Suspicious0dp">
-
-                </WebView>
-
                 <TextView
-                    android:id="@+id/textViewInfoAllgemein"
-                    android:text="Connection Failed!"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:text="@string/allgemeineInformationenÜberschrift1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/allgemeineInformationenText1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/allgemeineInformationenÜberschrift2"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/allgemeineInformationenText2"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/allgemeineInformationenÜberschrift3"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/allgemeineInformationenText3"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/allgemeineInformationenText4"/>
             </LinearLayout>
         </ScrollView>
 

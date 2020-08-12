@@ -30,20 +30,20 @@
     <fragment
         android:id="@+id/actsMainFragment"
         android:name="com.example.kartellderliebe.ui.lineUp.LineUpMainFragment"
-        android:label="fragment_acts_main"
+        android:label="Acts"
         tools:layout="@layout/fragment_acts_main" />
     <fragment
         android:id="@+id/foodMainFragment"
         android:name="com.example.kartellderliebe.ui.food.FoodMainFragment"
-        android:label="FoodMainFragment" />
+        android:label="Food" />
     <fragment
         android:id="@+id/festivalInfosMainFragment"
         android:name="com.example.kartellderliebe.ui.info.FestivalInfosMainFragment"
-        android:label="FestivalInfosMainFragment" />
+        android:label="Festival Infos" />
     <fragment
         android:id="@+id/festivalNewsFragment"
         android:name="com.example.kartellderliebe.ui.FestivalNewsFragment"
-        android:label="fragment_festival_news"
+        android:label="Festival News"
         tools:layout="@layout/fragment_festival_news" >
         <action
             android:id="@+id/action_festivalNewsFragment_to_newsFeedDetailFragment"
@@ -52,7 +52,7 @@
     <fragment
         android:id="@+id/newsFeedDetailFragment"
         android:name="com.example.kartellderliebe.ui.NewsFeedDetailFragment"
-        android:label="NewsFeedDetailFragment" >
+        android:label="Festival News" >
         <argument
             android:name="feedURL"
             app:argType="string" />
