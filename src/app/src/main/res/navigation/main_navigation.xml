@@ -31,7 +31,11 @@
         android:id="@+id/actsMainFragment"
         android:name="com.example.kartellderliebe.ui.lineUp.LineUpMainFragment"
         android:label="Acts"
-        tools:layout="@layout/fragment_acts_main" />
+        tools:layout="@layout/fragment_acts_main">
+        <action
+            android:id="@+id/action_actsMainFragment_to_actsDetailWebView"
+            app:destination="@id/actsDetailWebViewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/foodMainFragment"
         android:name="com.example.kartellderliebe.ui.food.FoodMainFragment"
@@ -52,9 +56,17 @@
     <fragment
         android:id="@+id/newsFeedDetailFragment"
         android:name="com.example.kartellderliebe.ui.NewsFeedDetailFragment"
-        android:label="Festival News" >
+        android:label="Festival News">
         <argument
             android:name="feedURL"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/actsDetailWebViewFragment"
+        android:name="com.example.kartellderliebe.ui.lineUp.ActsDetailWebViewFragment"
+        android:label="ActsDetailWebView">
+        <argument
+            android:name="actDetailsURL"
             app:argType="string" />
     </fragment>
 </navigation>

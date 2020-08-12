@@ -2,27 +2,17 @@ package com.example.kartellderliebe.json.lineUp
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.CalendarContract
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
-import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kartellderliebe.R
-import com.example.kartellderliebe.getJsonDataFromAsset
 import com.example.kartellderliebe.rss.`interface`.ItemClickListener
-import com.example.kartellderliebe.rss.model.RSSObject
-import com.example.kartellderliebe.ui.FestivalNewsFragmentDirections
-import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.actssingleelement.*
+import com.example.kartellderliebe.ui.lineUp.LineUpMainFragmentDirections
 import java.util.*
 
 class ActsAdapter(var jsonObject: JSONObject, var mContext : Context, var inflater: LayoutInflater? = LayoutInflater.from(mContext)) : RecyclerView.Adapter<ActsHolder>() {
@@ -66,7 +56,11 @@ class ActsAdapter(var jsonObject: JSONObject, var mContext : Context, var inflat
         holder.itemClickListener = object : ItemClickListener {
             override fun onClick(view: View, position: Int, isLongClick: Boolean) {
                 if(!isLongClick){
-                    view.findNavController().navigate(FestivalNewsFragmentDirections.actionFestivalNewsFragmentToNewsFeedDetailFragment(jsonObject.link))
+                    view.findNavController().navigate(
+                        LineUpMainFragmentDirections.actionActsMainFragmentToActsDetailWebView(
+                            jsonObject.link
+                        )
+                    )
                 }
             }
         }

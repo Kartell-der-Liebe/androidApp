@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Kartellder Liebe</string>
+    <string name="app_name">Eine Liebe</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
 
     <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
+    <string name="signature_title">Kartell der Liebe</string>
     <string name="reply_title">Default reply action</string>
 
     <!-- Sync Preferences -->
@@ -27,8 +27,8 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    
-    <string name="allgemeineInformationenÜberschrift1" >ALLGEMEINE INFORMATIONEN\n</string>
+
+    <string name="allgemeineInformationenÜberschrift1">ALLGEMEINE INFORMATIONEN\n</string>
     <string name="allgemeineInformationenText1">Das Kartell der Liebe, entstanden aus dem „No Stress"-Gedanken, steht für eine Null-Toleranz-Einstellung gegenüber jedweder körperlichen oder psychischen Aggression, respektlosen Verhalten oder groben Verstößen gegen die Regeln unseres Festivals. Wir wollen zusammen mit allen Festivalbesuchern bei EINE LIEBE eine positive Atmosphäre schaffen, die sich gegen Hass, Rassismus, Sexismus, Homophobie und anderweitige Ressentiments und Ausgrenzung stellt. Auch appellieren wir an dieser Stelle an unsere Verbundenheit zur Natur: Bitte achtet auf dieses wunderschöne Fleckchen, das wir für unser Festival auserkoren haben. Macht nichts kaputt und werft vor allem keinen Müll oder Sonstiges in die Bachläufe, Wälder und Felder.\n\”
 
 Um gemeinsam ein unvergleichliches und stressfreies Festival-Wochenende zu haben, gilt während der gesamten Veranstaltung unsere Hausordnung. Die Hausordnung und das Sicherheitskonzept wurde gemeinsam mit der Polizei, der Feuerwehr, dem Sanitätsdienst, der Gemeinde Herdwangen-Schönach und dem Landratsamt erstellt, um uns allen ein friedliches und sicheres Festival zu ermöglichen.\n\n
