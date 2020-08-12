@@ -16,7 +16,7 @@ import com.example.kartellderliebe.databinding.FragmentAllgemeinInfosBinding
 import com.example.kartellderliebe.databinding.FragmentUnter18Binding
 
 class Unter18Fragment : Fragment() {
-    
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
