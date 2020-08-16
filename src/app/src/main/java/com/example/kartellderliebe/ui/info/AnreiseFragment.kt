@@ -22,6 +22,8 @@ class AnreiseFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentAnreiseBinding.inflate(inflater, container, false)
+        val expTv = binding.expandTextView
+        expTv.text = getString(R.string.anreiseInformationenText1)
         return binding.root
     }
 }

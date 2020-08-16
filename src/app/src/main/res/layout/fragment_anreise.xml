@@ -13,21 +13,45 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/EL2020SchriftDunkel"
                 android:textAlignment="center"
                 android:textSize="20dp"
                 android:layout_gravity="center_horizontal"
                 android:paddingTop="35dp"
-                android:text="@string/anreiseInformationenÜberschrift1"/>
-            <TextView
+                android:text="@string/anreiseInformationenÜberschrift1"
+                android:layout_marginTop="20dp"/>
+
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/expand_text_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/poppins_semibold"
-                android:textColor="@color/EL2020SchriftDunkel"
-                android:padding="25dp"
-                android:text="@string/anreiseInformationenText1"/>
+                android:layout_below="@id/textView"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                expandableTextView:maxCollapsedLines="4"
+                expandableTextView:animDuration="200">
+
+                <TextView
+                    android:id="@id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/EL2020SchriftDunkel"
+                    android:padding="25dp"/>
+
+                <ImageButton
+                    android:id="@id/expand_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="@android:color/transparent"/>
+
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
 
             <TextView
                 android:layout_width="match_parent"
