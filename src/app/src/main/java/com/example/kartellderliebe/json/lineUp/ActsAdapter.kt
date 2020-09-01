@@ -18,7 +18,6 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kartellderliebe.R
-import com.example.kartellderliebe.getJsonDataFromAsset
 import com.example.kartellderliebe.rss.`interface`.ItemClickListener
 import com.example.kartellderliebe.rss.model.RSSObject
 import com.example.kartellderliebe.ui.FestivalNewsFragmentDirections
@@ -70,12 +69,17 @@ class ActsAdapter(var jsonObject: JSONObject, var mContext : Context, var inflat
                 .putExtra(CalendarContract.Events.EVENT_LOCATION, jsonObject.acts[position].stage)
                 .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.ALLOWED_AVAILABILITY)
                 .putExtra(Intent.EXTRA_EMAIL, "rowan@example.com,trevor@example.com")
+
             startActivity(mContext,intent, Bundle.EMPTY)
         }
         holder.itemClickListener = object : ItemClickListener {
             override fun onClick(view: View, position: Int, isLongClick: Boolean) {
                 if(!isLongClick){
-                    view.findNavController().navigate(FestivalNewsFragmentDirections.actionFestivalNewsFragmentToNewsFeedDetailFragment(jsonObject.link))
+                    view.findNavController().navigate(
+                        LineUpMainFragmentDirections.actionActsMainFragmentToActsDetailWebView(
+                            jsonObject.link
+                        )
+                    )
                 }
             }
         }

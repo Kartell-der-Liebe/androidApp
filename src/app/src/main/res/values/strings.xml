@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Kartellder Liebe</string>
+    <string name="app_name">Eine Liebe</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
@@ -43,6 +43,7 @@ Das Sicherheitskonzept bedeutet jedoch leider nicht nur Konsequenzen und Zugest�
     <string name="anreiseInformationenÜberschrift2">MIT DEM AUTO\n</string>
     <string name="anreiseInformationenText1">Bitte achtet im Vorfeld Eurer Anreise auf alle aktuellen Anfahrtshinweise, die wir über unsere EINE LIEBE Facebookseite und E-Mail kommunizieren. Vor Ort ist die Verkehrs- und die Festivalbeschilderung zu beachten. Von uns abgesperrte Straßen sind vor allem aus Sicherheitsgründen als Rettungswege wichtig für unser gemeinsames Festival, eine Anreise ist nur über die ausgeschilderte Zufahrt möglich. Schleichwege bringen Euch und uns gar nichts. Wir wollen Euch nicht ärgern, sondern dafür sorgen, dass Ihr schnell und sicher beim EINE LIEBE ankommt. Helft uns dabei!\n\n
         Die Parkplatz-Zufahrt befindet sich auf der L195 von Herdwangen in Richtung Überlingen/Owingen, ca. 800m vom Ortsausgang Vorstadt entfernt. Am besten ihr gebt in eurem Navi folgende Adresse ein und folgt von dort aus der Beschilderung:\n\n
+
 
         Bodenseestraße\n
         88634 Herdwangen-Schönach\n\n

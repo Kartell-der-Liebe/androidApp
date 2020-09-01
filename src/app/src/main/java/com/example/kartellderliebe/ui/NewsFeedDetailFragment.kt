@@ -16,10 +16,8 @@ class NewsFeedDetailFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val binding = FragmentNewsFeedDetailBinding.inflate(inflater, container, false)
-        val bundle = arguments
-        binding.webViewNewsFeedDetail.loadUrl("http://google.com")
-        val args =arguments?.let { NewsFeedDetailFragmentArgs.fromBundle(it) }
-        args?.feedURL?.let { binding.webViewNewsFeedDetail.loadUrl(it) }
+        val args = arguments?.let { NewsFeedDetailFragmentArgs.fromBundle(it) }
+        binding.webViewNewsFeedDetail.loadUrl(args?.feedURL)
 
         return binding.root
     }
