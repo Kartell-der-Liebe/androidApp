@@ -34,7 +34,5 @@
             android:fontFamily="@font/poppins_semibold"
             android:textSize="25sp"
             android:textColor="@color/Black" />
-
-
     </RelativeLayout>
 </layout>

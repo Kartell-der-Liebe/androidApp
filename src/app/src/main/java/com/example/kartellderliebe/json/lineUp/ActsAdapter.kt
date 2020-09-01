@@ -64,12 +64,17 @@ class ActsAdapter(
                 .putExtra(CalendarContract.Events.EVENT_LOCATION, jsonObject.acts[position].stage)
                 .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.ALLOWED_AVAILABILITY)
                 .putExtra(Intent.EXTRA_EMAIL, "rowan@example.com,trevor@example.com")
+
             startActivity(mContext,intent, Bundle.EMPTY)
         }
         holder.itemClickListener = object : ItemClickListener {
             override fun onClick(view: View, position: Int, isLongClick: Boolean) {
                 if(!isLongClick){
-                    view.findNavController().navigate(FestivalNewsFragmentDirections.actionFestivalNewsFragmentToNewsFeedDetailFragment(jsonObject.link))
+                    view.findNavController().navigate(
+                        LineUpMainFragmentDirections.actionActsMainFragmentToActsDetailWebView(
+                            jsonObject.link
+                        )
+                    )
                 }
             }
         }
