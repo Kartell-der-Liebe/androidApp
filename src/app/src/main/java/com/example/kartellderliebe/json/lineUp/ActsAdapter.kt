@@ -58,7 +58,7 @@ class ActsAdapter(var jsonObject: JSONObject, var mContext : Context, var inflat
                 .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endMillis)
                 .putExtra(CalendarContract.Events.TITLE, "Yoga")
                 .putExtra(CalendarContract.Events.DESCRIPTION, "Group class")
-                .putExtra(CalendarContract.Events.EVENT_LOCATION, "The gym")
+                .putExtra(CalendarContract.Events.EVENT_LOCATION, jsonObject.acts[position].stage)
                 .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.ALLOWED_AVAILABILITY)
                 .putExtra(Intent.EXTRA_EMAIL, "rowan@example.com,trevor@example.com")
             startActivity(mContext,intent, Bundle.EMPTY)

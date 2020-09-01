@@ -15,15 +15,55 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/EL2020SchriftDunkel"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="35dp"
                 android:text="@string/unter18Überschrift1"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/EL2020SchriftDunkel"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="35dp"
                 android:text="@string/unter18Überschrift2"/>
-            <TextView
+
+
+            <com.example.kartellderliebe.ExpandableTextView xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/expand_text_view1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/unter18Text"/>
+                android:layout_height="wrap_content"
+                expandableTextView:maxCollapsedLines="4"
+                expandableTextView:animDuration="200">
+
+                <TextView
+                    android:id="@+id/expandable_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/EL2020SchriftDunkel"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="25dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="0dp" />
+
+                <ImageButton
+                    android:id="@+id/expand_collapse1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="0dp"
+                    android:paddingRight="25dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="@android:color/transparent" />
+
+            </com.example.kartellderliebe.ExpandableTextView>
         </LinearLayout>
     </ScrollView>
 </layout>

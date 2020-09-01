@@ -21,6 +21,7 @@ import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.annotation.IdRes
 import androidx.annotation.Nullable
+import kotlin.properties.Delegates
 
 
 open class ExpandableTextView : LinearLayout, View.OnClickListener {
@@ -37,11 +38,10 @@ open class ExpandableTextView : LinearLayout, View.OnClickListener {
     private var mAnimAlphaStart = 0f
     private var mAnimating = false
 
-    @IdRes
-    private var mExpandableTextId = R.id.expandable_text
+    private var mExpandableTextId by Delegates.notNull<Int>()
+    private var mExpandCollapseToggleId by Delegates.notNull<Int>()
+    private var attrs: AttributeSet? = null
 
-    @IdRes
-    private var mExpandCollapseToggleId = R.id.expand_collapse
     private var mExpandToggleOnTextClick = false
 
     /* Listener for callback */
@@ -56,16 +56,18 @@ open class ExpandableTextView : LinearLayout, View.OnClickListener {
         context: Context?,
         attrs: AttributeSet? = null
     ) : super(context, attrs) {
-        init(attrs)
+        //init(attrs)
+        this.attrs = attrs
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     constructor(
         context: Context?,
         attrs: AttributeSet?,
-        defStyle: Int
+        defStyle: Int,
+        attrs1: AttributeSet?
     ) : super(context, attrs, defStyle) {
-        init(attrs)
+        //init(attrs)
     }
 
     override fun setOrientation(orientation: Int) {
@@ -125,7 +127,7 @@ open class ExpandableTextView : LinearLayout, View.OnClickListener {
 
     override fun onFinishInflate() {
         super.onFinishInflate()
-        findViews()
+
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -201,6 +203,13 @@ open class ExpandableTextView : LinearLayout, View.OnClickListener {
             requestLayout()
         }
 
+    public fun setAttr(id1 : Int, id2 : Int){
+        mExpandableTextId = id1
+        mExpandCollapseToggleId = id2
+        init((attrs))
+        findViews()
+    }
+
     private fun init(attrs: AttributeSet?) {
         val typedArray =
             context.obtainStyledAttributes(attrs, R.styleable.ExpandableTextView)
@@ -215,14 +224,6 @@ open class ExpandableTextView : LinearLayout, View.OnClickListener {
         mAnimAlphaStart = typedArray.getFloat(
             R.styleable.ExpandableTextView_animAlphaStart,
             DEFAULT_ANIM_ALPHA_START
-        )
-        mExpandableTextId = typedArray.getResourceId(
-            R.styleable.ExpandableTextView_expandableTextId,
-            R.id.expandable_text
-        )
-        mExpandCollapseToggleId = typedArray.getResourceId(
-            R.styleable.ExpandableTextView_expandCollapseToggleId,
-            R.id.expand_collapse
         )
         mExpandToggleOnTextClick =
             typedArray.getBoolean(R.styleable.ExpandableTextView_expandToggleOnTextClick, true)
@@ -340,7 +341,7 @@ open class ExpandableTextView : LinearLayout, View.OnClickListener {
             EXPAND_INDICATOR_IMAGE_BUTTON
 
         /* The default number of lines */
-        private const val MAX_COLLAPSED_LINES = 8
+        private const val MAX_COLLAPSED_LINES = 5
 
         /* The default animation duration */
         private const val DEFAULT_ANIM_DURATION = 300

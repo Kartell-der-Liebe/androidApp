@@ -16,10 +16,14 @@ class AnreiseFragment : Fragment() {
     ): View? {
         val binding = FragmentAnreiseBinding.inflate(inflater, container, false)
         val expTv1 = binding.expandTextView1
+        expTv1.setAttr(R.id.expandable_text1, R.id.expand_collapse1)
         expTv1.text = getString(R.string.anreiseInformationenText1)
-
-        val myTextView = binding.myTextView
-        myTextView.text = getString(R.string.anreiseInformationenText2)
+        val expTv2 = binding.expandTextView2
+        expTv2.setAttr(R.id.expandable_text2, R.id.expand_collapse2)
+        expTv2.text = getString(R.string.anreiseInformationenText2)
+        val expTv3 = binding.expandTextView3
+        expTv3.setAttr(R.id.expandable_text3, R.id.expand_collapse3)
+        expTv3.text = getString(R.string.anreiseInformationenText3)
         return binding.root
     }
 }
