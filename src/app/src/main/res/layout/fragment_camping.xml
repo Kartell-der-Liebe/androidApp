@@ -12,19 +12,14 @@
             android:orientation="vertical"
             tools:ignore="WebViewLayout">
 
-            <WebView
-                android:id="@+id/webView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                tools:ignore="Suspicious0dp">
-
-            </WebView>
-
             <TextView
-                android:id="@+id/textViewInfoCamping"
-                android:text="Connection Failed!"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:text="@string/campingÜberschrift"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/campingText"/>
         </LinearLayout>
     </ScrollView>
 </layout>

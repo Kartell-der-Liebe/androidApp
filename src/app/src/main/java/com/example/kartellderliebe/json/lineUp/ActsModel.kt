@@ -4,6 +4,7 @@ import com.google.gson.Gson
 
 data class JSONObject (
     val year: String,
+    val link: String,
     val stage: List<Stage>,
     val acts: List<Act>
 )

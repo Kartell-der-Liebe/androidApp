@@ -9,22 +9,82 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:ignore="WebViewLayout">
-
-            <WebView
-                android:id="@+id/webView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                tools:ignore="Suspicious0dp">
-
-            </WebView>
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textViewInfoAnreise"
-                android:text="Connection Failed!"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/EL2020SchriftDunkel"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="35dp"
+                android:text="@string/anreiseInformationenÜberschrift1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/EL2020SchriftDunkel"
+                android:padding="25dp"
+                android:text="@string/anreiseInformationenText1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/EL2020SchriftDunkel"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="35dp"
+                android:text="@string/anreiseInformationenÜberschrift2"/>
+
+            <!-- HIER GOOGLE MAPS LINK-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/EL2020SchriftDunkel"
+                android:padding="25dp"
+                android:text="@string/anreiseInformationenText4"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/EL2020SchriftDunkel"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="35dp"
+                android:text="@string/anreiseInformationenÜberschrift3"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/EL2020SchriftDunkel"
+                android:padding="25dp"
+                android:text="@string/anreiseInformationenText2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/EL2020SchriftDunkel"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="35dp"
+                android:text="@string/anreiseInformationenÜberschrift4"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/EL2020SchriftDunkel"
+                android:padding="25dp"
+                android:text="@string/anreiseInformationenText3"/>
+
         </LinearLayout>
     </ScrollView>
 </layout>

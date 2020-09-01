@@ -12,19 +12,18 @@
             android:orientation="vertical"
             tools:ignore="WebViewLayout">
 
-            <WebView
-                android:id="@+id/webView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                tools:ignore="Suspicious0dp">
-
-            </WebView>
-
             <TextView
-                android:id="@+id/textViewInfoUnter18"
-                android:text="Connection Failed!"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:text="@string/unter18Überschrift1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/unter18Überschrift2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/unter18Text"/>
         </LinearLayout>
     </ScrollView>
 </layout>

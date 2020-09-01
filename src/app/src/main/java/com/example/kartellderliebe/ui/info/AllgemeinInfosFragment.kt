@@ -16,42 +16,11 @@ import com.example.kartellderliebe.databinding.FragmentAllgemeinInfosBinding
 
 class AllgemeinInfosFragment : Fragment() {
 
-    private lateinit var contentView: TextView
-    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentAllgemeinInfosBinding.inflate(inflater, container, false)
-        val webView = binding.webView
-        contentView = binding.textViewInfoAllgemein
-        contentView.movementMethod = ScrollingMovementMethod()
-
-        class JavaScriptInterface(aContentView: TextView) {
-            private var contentView1: TextView? = null
-
-            init {
-                contentView1 = aContentView
-            }
-
-            @SuppressLint("SetTextI18n")
-            @JavascriptInterface
-            fun processContent(aContent: String) {
-                if(aContent != "") {
-                    contentView1?.post { contentView.text = aContent }
-                }
-            }
-        }
-
-        webView.settings.javaScriptEnabled = true
-        webView.addJavascriptInterface(JavaScriptInterface(contentView), "INTERFACE1")
-        webView.webViewClient = object : WebViewClient() {
-            override fun onPageFinished(view: WebView, url: String) {
-                view.loadUrl("javascript:window.INTERFACE1.processContent(document.getElementById('Content').getElementsByClassName('content_wrapper clearfix')[0].getElementsByClassName('sections_group')[0].getElementsByClassName('entry-content')[0].getElementsByClassName('section mcb-section mcb-section-mplxyfnn4')[0].getElementsByClassName('section_wrapper mcb-section-inner')[0].getElementsByClassName('wrap mcb-wrap mcb-wrap-gkw9kg93q one  valign-top clearfix')[0].getElementsByClassName('mcb-wrap-inner')[0].getElementsByClassName('column mcb-column mcb-item-s50p4zqqo one column_tabs')[0].getElementsByClassName('jq-tabs tabs_wrapper tabs_centered')[0].getElementsByTagName( 'div' )[0].innerText)")
-            }
-        }
-
-        webView.loadUrl("https://eineliebe.de/infos/")
         return binding.root
     }
 }
