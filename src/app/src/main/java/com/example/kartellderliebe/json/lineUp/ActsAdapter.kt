@@ -13,7 +13,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kartellderliebe.R
 import com.example.kartellderliebe.rss.`interface`.ItemClickListener
-import com.example.kartellderliebe.ui.FestivalNewsFragmentDirections
+import com.example.kartellderliebe.ui.lineUp.LineUpMainFragmentDirections
 import java.util.*
 
 class ActsAdapter(
