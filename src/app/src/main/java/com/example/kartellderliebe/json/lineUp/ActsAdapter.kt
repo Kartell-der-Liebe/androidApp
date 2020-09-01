@@ -13,6 +13,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getDrawable
 import androidx.core.content.ContextCompat.startActivity
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -42,6 +43,14 @@ class ActsAdapter(var jsonObject: JSONObject, var mContext : Context, var inflat
         holder: ActsHolder,
         position: Int
     ) {
+        when (position %5) {
+            0 -> { holder.actsImageView.background = getDrawable(mContext, R.drawable.line_up_bluemchen)}
+            1 -> { holder.actsImageView.background = getDrawable(mContext, R.drawable.line_up_britney)}
+            2 -> { holder.actsImageView.background = getDrawable(mContext, R.drawable.line_up_diedoofen)}
+            3 -> { holder.actsImageView.background = getDrawable(mContext, R.drawable.line_up_schluempfe)}
+            else -> { holder.actsImageView.background = getDrawable(mContext, R.drawable.line_up_scooter)}
+        }
+
         holder.actsTextView.text = jsonObject.acts[position].name
         holder.actsCalender.setOnClickListener {
             val startMillis: Long = Calendar.getInstance().run {

@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:fontFamily="@font/poppins_semibold"
-                android:textSize="40dp"
+                android:textSize="40sp"
                 android:text="LINE UP"
                 android:textColor="@color/EL2020SchriftDunkel" />
         </RelativeLayout>

@@ -22,9 +22,6 @@ class CampingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentCampingBinding.inflate(inflater, container, false)
-        val expTv1 = binding.expandTextView1
-        expTv1.setAttr(R.id.expandable_text1, R.id.expand_collapse1)
-        expTv1.text = getString(R.string.campingText)
         return binding.root
     }
 }

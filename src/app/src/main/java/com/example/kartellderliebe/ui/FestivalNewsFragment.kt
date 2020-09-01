@@ -38,9 +38,7 @@ class FestivalNewsFragment : Fragment() {
         binding = FragmentFestivalNewsBinding.inflate(inflater, container, false)
         setHasOptionsMenu(true)
 
-        toolbar = binding.toolbar
         recyclerView = binding.recyclerView
-        toolbar.title = "News"
 
         val linearLayoutManager = LinearLayoutManager(context)
         recyclerView.layoutManager = linearLayoutManager

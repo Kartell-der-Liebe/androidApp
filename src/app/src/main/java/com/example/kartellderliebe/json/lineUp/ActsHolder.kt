@@ -2,6 +2,7 @@ package com.example.kartellderliebe.json.lineUp
 
 import android.view.View
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kartellderliebe.R
@@ -12,6 +13,7 @@ class ActsHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnCli
     //2
     var actsTextView : TextView = itemView.findViewById(R.id.itemDate)
     var actsCalender : ImageView = itemView.findViewById(R.id.calender)
+    var actsImageView : ImageView = itemView.findViewById(R.id.imageViewSingleActsElement)
     lateinit var itemClickListener: ItemClickListener
 
     //3

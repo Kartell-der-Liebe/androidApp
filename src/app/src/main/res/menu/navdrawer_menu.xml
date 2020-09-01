@@ -5,26 +5,21 @@
     <item
         android:id="@+id/homeFragment"
         android:icon="@drawable/ic_refresh"
-        android:color="@color/EL2020SchriftDunkel"
         android:title="Home" />
     <item
         android:id="@+id/actsMainFragment"
         android:icon="@drawable/ic_refresh"
-        android:color="@color/EL2020SchriftDunkel"
         android:title="Line Up" />
     <item
         android:id="@+id/foodMainFragment"
         android:icon="@drawable/ic_refresh"
-        android:color="@color/EL2020SchriftDunkel"
         android:title="Food" />
     <item
         android:id="@+id/festivalNewsFragment"
         android:icon="@drawable/ic_refresh"
-        android:color="@color/EL2020SchriftDunkel"
         android:title="Festival News" />
     <item
         android:id="@+id/festivalInfosMainFragment"
         android:icon="@drawable/ic_refresh"
-        android:color="@color/EL2020SchriftDunkel"
         android:title="Festival Infos" />
 </menu>

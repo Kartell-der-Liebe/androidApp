@@ -409,13 +409,13 @@ open class ExpandableTextView : LinearLayout, View.OnClickListener {
                     if (expandDrawable == null) {
                         expandDrawable = getDrawable(
                             context,
-                            R.drawable.ic_expand_more_black_12dp
+                            R.drawable.kartell_expand_more_black
                         )
                     }
                     if (collapseDrawable == null) {
                         collapseDrawable = getDrawable(
                             context,
-                            R.drawable.ic_expand_less_black_12dp
+                            R.drawable.kartell_expand_less_black
                         )
                     }
                     expandIndicatorController = ImageButtonExpandController(
