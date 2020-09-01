@@ -1,6 +1,7 @@
 package com.example.kartellderliebe.ui
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.AsyncTask
 import android.os.Bundle
 import android.os.Handler
@@ -12,6 +13,7 @@ import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
 import com.example.kartellderliebe.R
 import com.example.kartellderliebe.databinding.FragmentFestivalNewsBinding
 import com.example.kartellderliebe.rss.`interface`.FeedAdapter
@@ -19,7 +21,7 @@ import com.example.kartellderliebe.rss.common.HTTPDataHandler
 import com.example.kartellderliebe.rss.model.RSSObject
 import com.google.gson.Gson
 
-class FestivalNewsFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
+class FestivalNewsFragment : Fragment(){
 
     lateinit var swipeToRefresh : SwipeRefreshLayout
     lateinit var recyclerView: RecyclerView
@@ -43,7 +45,8 @@ class FestivalNewsFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
         recyclerView.layoutManager = linearLayoutManager
 
         swipeToRefresh = binding.swiperefresh
-        swipeToRefresh.setOnRefreshListener(this)
+        swipeToRefresh.setOnRefreshListener { loadRSS() }
+        swipeToRefresh.setColorSchemeColors(Color.parseColor("#002c3c"), Color.parseColor("#fdea04"))
 
         loadRSS()
 
@@ -74,6 +77,7 @@ class FestivalNewsFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
         val url_get_data = StringBuilder(RSS2JSONAPI)
         url_get_data.append(RSS_LINK)
         loadRSSAsync.execute(url_get_data.toString())
+        swipeToRefresh.isRefreshing = false
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -83,11 +87,5 @@ class FestivalNewsFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
-    }
-
-    override fun onRefresh() {
-        Toast.makeText(context, "Refresh", Toast.LENGTH_SHORT).show();
-        loadRSS()
-        Handler().postDelayed(Runnable { swipeToRefresh.isRefreshing = false }, 2000)
     }
 }
