@@ -66,7 +66,6 @@ class FestivalNewsFragment : Fragment() {
                     val adapter = context?.let { FeedAdapter(rssObject, it) }
                     recyclerView.adapter = adapter
                     adapter?.notifyDataSetChanged()
-                    binding.newsConnectionFailedTextView.text = ""
                 }
             }
         }
