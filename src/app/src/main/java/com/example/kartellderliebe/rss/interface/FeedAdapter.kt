@@ -24,9 +24,13 @@ class FeedAdapter(var rssObject: RSSObject, var mContext : Context, var inflater
     }
 
     override fun onBindViewHolder(holder: FeedViewHolder, position: Int) {
+        val startChar = "<p>"
+        val endChar = "</p>"
         holder.txtTitle.text = rssObject.items[position].title
         holder.txtPubDate.text = rssObject.items[position].pubDate
-        holder.txtContent.text = rssObject.items[position].description
+        val startDescription = rssObject.items[position].description.indexOf(startChar, 0)
+        val endDescription = rssObject.items[position].description.indexOf(endChar, 0)
+        holder.txtContent.text = rssObject.items[position].description.subSequence(startDescription + startChar.length, endDescription)
 
         holder.itemClickListener = object : ItemClickListener {
             override fun onClick(view: View, position: Int, isLongClick: Boolean) {
