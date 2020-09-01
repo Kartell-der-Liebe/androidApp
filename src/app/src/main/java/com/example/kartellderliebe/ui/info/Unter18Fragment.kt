@@ -22,6 +22,9 @@ class Unter18Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentUnter18Binding.inflate(inflater, container, false)
+        val expTv1 = binding.expandTextView1
+        expTv1.setAttr(R.id.expandable_text1, R.id.expand_collapse1)
+        expTv1.text = getString(R.string.unter18Text)
         return binding.root
     }
 }
