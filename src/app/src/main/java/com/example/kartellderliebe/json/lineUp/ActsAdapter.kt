@@ -7,6 +7,7 @@ import android.provider.CalendarContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.getDrawable
 import androidx.core.content.ContextCompat.startActivity
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -15,7 +16,11 @@ import com.example.kartellderliebe.rss.`interface`.ItemClickListener
 import com.example.kartellderliebe.ui.lineUp.LineUpMainFragmentDirections
 import java.util.*
 
-class ActsAdapter(var jsonObject: JSONObject, var mContext : Context, var inflater: LayoutInflater? = LayoutInflater.from(mContext)) : RecyclerView.Adapter<ActsHolder>() {
+class ActsAdapter(
+    var jsonObject: JSONActsObject,
+    var mContext: Context,
+    var inflater: LayoutInflater? = LayoutInflater.from(mContext)
+) : RecyclerView.Adapter<ActsHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -32,6 +37,14 @@ class ActsAdapter(var jsonObject: JSONObject, var mContext : Context, var inflat
         holder: ActsHolder,
         position: Int
     ) {
+        when (position %5) {
+            0 -> { holder.actsImageView.background = getDrawable(mContext, R.drawable.line_up_bluemchen)}
+            1 -> { holder.actsImageView.background = getDrawable(mContext, R.drawable.line_up_britney)}
+            2 -> { holder.actsImageView.background = getDrawable(mContext, R.drawable.line_up_diedoofen)}
+            3 -> { holder.actsImageView.background = getDrawable(mContext, R.drawable.line_up_schluempfe)}
+            else -> { holder.actsImageView.background = getDrawable(mContext, R.drawable.line_up_scooter)}
+        }
+
         holder.actsTextView.text = jsonObject.acts[position].name
         holder.actsCalender.setOnClickListener {
             val startMillis: Long = Calendar.getInstance().run {
@@ -46,10 +59,12 @@ class ActsAdapter(var jsonObject: JSONObject, var mContext : Context, var inflat
                 .setData(CalendarContract.Events.CONTENT_URI)
                 .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startMillis)
                 .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endMillis)
-                .putExtra(CalendarContract.Events.TITLE, jsonObject.acts[position].name)
+                .putExtra(CalendarContract.Events.TITLE, "Yoga")
                 .putExtra(CalendarContract.Events.DESCRIPTION, "Group class")
-                .putExtra(CalendarContract.Events.EVENT_LOCATION, "The gym")
+                .putExtra(CalendarContract.Events.EVENT_LOCATION, jsonObject.acts[position].stage)
                 .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.ALLOWED_AVAILABILITY)
+                .putExtra(Intent.EXTRA_EMAIL, "rowan@example.com,trevor@example.com")
+
             startActivity(mContext,intent, Bundle.EMPTY)
         }
         holder.itemClickListener = object : ItemClickListener {

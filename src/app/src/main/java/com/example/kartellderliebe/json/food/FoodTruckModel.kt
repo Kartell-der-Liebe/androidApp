@@ -1,4 +1,7 @@
 package com.example.kartellderliebe.json.food
 
-class FoodTruckModel {
-}
+import com.example.kartellderliebe.json.lineUp.Act
+
+data class JSONFoodObject(
+    val food: List<Act>
+)

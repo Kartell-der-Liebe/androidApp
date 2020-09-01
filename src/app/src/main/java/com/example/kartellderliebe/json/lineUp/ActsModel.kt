@@ -1,8 +1,6 @@
 package com.example.kartellderliebe.json.lineUp
 
-import com.google.gson.Gson
-
-data class JSONObject (
+data class JSONActsObject(
     val year: String,
     val link: String,
     val stage: List<Stage>,

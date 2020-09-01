@@ -1,18 +1,11 @@
 package com.example.kartellderliebe.ui.info
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.text.method.ScrollingMovementMethod
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.JavascriptInterface
-import android.webkit.WebView
-import android.webkit.WebViewClient
-import android.widget.TextView
+import androidx.fragment.app.Fragment
 import com.example.kartellderliebe.R
-import com.example.kartellderliebe.databinding.FragmentAllgemeinInfosBinding
 import com.example.kartellderliebe.databinding.FragmentAnreiseBinding
 
 class AnreiseFragment : Fragment() {
@@ -22,6 +15,15 @@ class AnreiseFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentAnreiseBinding.inflate(inflater, container, false)
+        val expTv1 = binding.expandTextView1
+        expTv1.setAttr(R.id.expandable_text1, R.id.expand_collapse1)
+        expTv1.text = getString(R.string.anreiseInformationenText1)
+        val expTv2 = binding.expandTextView2
+        expTv2.setAttr(R.id.expandable_text2, R.id.expand_collapse2)
+        expTv2.text = getString(R.string.anreiseInformationenText2)
+        val expTv3 = binding.expandTextView3
+        expTv3.setAttr(R.id.expandable_text3, R.id.expand_collapse3)
+        expTv3.text = getString(R.string.anreiseInformationenText3)
         return binding.root
     }
 }

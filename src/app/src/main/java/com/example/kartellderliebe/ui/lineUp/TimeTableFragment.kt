@@ -13,13 +13,13 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.kartellderliebe.databinding.FragmentTimeTableBinding
 import com.example.kartellderliebe.getJsonDataFromAsset
-import com.example.kartellderliebe.json.lineUp.JSONObject
+import com.example.kartellderliebe.json.lineUp.JSONActsObject
 import com.google.gson.Gson
 
 
 class TimeTableFragment : Fragment() {
 
-    lateinit var jsonObject : JSONObject
+    lateinit var jsonObject: JSONActsObject
     lateinit var binding: FragmentTimeTableBinding
 
     override fun onCreateView(
@@ -28,7 +28,10 @@ class TimeTableFragment : Fragment() {
     ): View? {
         // Inflate the layout for context fragment
         binding = FragmentTimeTableBinding.inflate(inflater, container, false)
-        jsonObject = Gson().fromJson(context?.let { getJsonDataFromAsset(it,"test.json") }, JSONObject::class.java)
+        jsonObject = Gson().fromJson(
+            context?.let { getJsonDataFromAsset(it, "test.json") },
+            JSONActsObject::class.java
+        )
 
         parseJSONContext()
         jsonObject.acts.sortedBy { it.time }

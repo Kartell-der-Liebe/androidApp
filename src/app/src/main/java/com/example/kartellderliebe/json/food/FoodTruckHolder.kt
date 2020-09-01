@@ -1,14 +1,16 @@
 package com.example.kartellderliebe.json.food
 
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kartellderliebe.R
 import com.example.kartellderliebe.rss.`interface`.ItemClickListener
 
-class FoodTruckHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener, View.OnLongClickListener  {
+class FoodTruckHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener, View.OnLongClickListener {
 
-    var actsTextView : TextView = itemView.findViewById(R.id.itemDate)
+    var foodTextView: TextView = itemView.findViewById(R.id.foodDescription)
+    var foodImageView: ImageView = itemView.findViewById(R.id.imageViewSingleFoodElement)
     lateinit var itemClickListener: ItemClickListener
 
     //3

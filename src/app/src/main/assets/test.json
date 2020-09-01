@@ -20,7 +20,7 @@
   ],
   "acts": [
       {
-        "name": "Alex",
+        "name": "Blümchen",
         "time": "1400",
         "stage": "DJ Zelt",
         "duration": "120",
@@ -28,7 +28,7 @@
         "image": "background.jpeg"
       },
       {
-        "name": "Björn",
+        "name": "Britney Spears",
         "time": "1400",
         "stage": "DJ Zelt",
         "duration": "120",
@@ -36,7 +36,7 @@
         "image": "background.jpeg"
       },
       {
-        "name": "Babsi",
+        "name": "Die Doofen",
         "time": "1400",
         "stage": "DJ Zelt",
         "duration": "120",
@@ -44,7 +44,7 @@
         "image": "background.jpeg"
       },
       {
-        "name": "Scooter",
+        "name": "Vader Abraham",
         "time": "1600",
         "stage": "DJ Zelt",
         "duration": "120",
@@ -52,7 +52,7 @@
         "image": "background.jpeg"
       },
       {
-        "name": "Da Tweekaz",
+        "name": "Scooter",
         "time": "1600",
         "stage": "DJ Zelt",
         "duration": "120",

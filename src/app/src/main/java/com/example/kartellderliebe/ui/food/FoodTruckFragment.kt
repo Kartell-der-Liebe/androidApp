@@ -6,12 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.kartellderliebe.R
-import com.example.kartellderliebe.databinding.FragmentActsBinding
 import com.example.kartellderliebe.databinding.FragmentFoodBinding
 import com.example.kartellderliebe.getJsonDataFromAsset
-import com.example.kartellderliebe.json.lineUp.ActsAdapter
-import com.example.kartellderliebe.json.lineUp.JSONObject
+import com.example.kartellderliebe.json.food.FoodTruckAdapter
+import com.example.kartellderliebe.json.food.JSONFoodObject
 import com.google.gson.Gson
 
 class FoodTruckFragment : Fragment() {
@@ -24,10 +22,13 @@ class FoodTruckFragment : Fragment() {
     ): View? {
         val binding = FragmentFoodBinding.inflate(inflater, container, false)
         gridLayoutManager = GridLayoutManager(context, 1)
-        val jsonObject = Gson().fromJson(context?.let { getJsonDataFromAsset(it,"test.json") }, JSONObject::class.java)
+        val jsonObject = Gson().fromJson(
+            context?.let { getJsonDataFromAsset(it, "food.json") },
+            JSONFoodObject::class.java
+        )
         val recyclerViewActs = binding.recyclerViewFoodTruck
         recyclerViewActs.layoutManager = gridLayoutManager
-        val adapter = context?.let { ActsAdapter(jsonObject, it) }
+        val adapter = context?.let { FoodTruckAdapter(jsonObject, it) }
         recyclerViewActs.adapter = adapter
         adapter?.notifyDataSetChanged()
 
