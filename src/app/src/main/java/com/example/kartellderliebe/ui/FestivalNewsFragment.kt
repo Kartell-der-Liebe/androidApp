@@ -3,26 +3,25 @@ package com.example.kartellderliebe.ui
 import android.annotation.SuppressLint
 import android.os.AsyncTask
 import android.os.Bundle
+import android.os.Handler
 import android.view.*
-import android.widget.ProgressBar
-import android.widget.Toolbar
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kartellderliebe.MainActivity
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.kartellderliebe.R
 import com.example.kartellderliebe.databinding.FragmentFestivalNewsBinding
 import com.example.kartellderliebe.rss.`interface`.FeedAdapter
 import com.example.kartellderliebe.rss.common.HTTPDataHandler
-import com.example.kartellderliebe.rss.model.Feed
 import com.example.kartellderliebe.rss.model.RSSObject
 import com.google.gson.Gson
 
-class FestivalNewsFragment : Fragment() {
+class FestivalNewsFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
 
-    lateinit var toolbar: androidx.appcompat.widget.Toolbar
+    lateinit var swipeToRefresh : SwipeRefreshLayout
     lateinit var recyclerView: RecyclerView
     lateinit var rssObject: RSSObject
 
@@ -42,6 +41,9 @@ class FestivalNewsFragment : Fragment() {
 
         val linearLayoutManager = LinearLayoutManager(context)
         recyclerView.layoutManager = linearLayoutManager
+
+        swipeToRefresh = binding.swiperefresh
+        swipeToRefresh.setOnRefreshListener(this)
 
         loadRSS()
 
@@ -81,5 +83,11 @@ class FestivalNewsFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
+    }
+
+    override fun onRefresh() {
+        Toast.makeText(context, "Refresh", Toast.LENGTH_SHORT).show();
+        loadRSS()
+        Handler().postDelayed(Runnable { swipeToRefresh.isRefreshing = false }, 2000)
     }
 }
