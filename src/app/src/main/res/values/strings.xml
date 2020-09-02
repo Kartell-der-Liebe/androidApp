@@ -107,15 +107,16 @@ Das Sicherheitskonzept bedeutet jedoch leider nicht nur Konsequenzen und Zugest�
     ❥ Eine Aufsichtsvollmacht (“MUTTIZETTEL”) wird innerhalb des Festivalgeländes leider nicht akzeptiert. Nach langen Beratungen und unter Abwägung aller Optionen, zusammen mit den zuständigen Behörden, haben wir uns dazu entschlossen, diese Regelungen so einzuführen.\n
     ❥ Bei Vorlage ungültiger/gefälschter Dokumenten wird kein Eintritt zum Festival gewährt und die Polizei informiert.\n
     ❥ Für das gesamte Veranstaltungsgelände inkl. Park- und Campingplatz gilt das Jugendschutzgesetz (JuSchG).</string>
-    <string name="foodsharing">Foodsharing Sigmaringen setzt sich in der Region gegen die Verschwendung von Lebensmitteln ein und "rettet" Lebensmittel, die sonst weggeworfen werden würden.
+    <string name="foodsharing">Foodsharing Sigmaringen setzt sich in der Region gegen die Verschwendung von Lebensmitteln ein und "rettet" Lebensmittel, die sonst weggeworfen werden würden.\n\n
 
-Die Lebensmittel werden durch #Fairteiler, also öffentliche Regale in die Lebensmittel eingestellt und herausgenommen werden können, allen Menschen zum Verzehr zugänglich gemacht.
+Die Lebensmittel werden durch #Fairteiler, also öffentliche Regale in die Lebensmittel eingestellt und herausgenommen werden können, allen Menschen zum Verzehr zugänglich gemacht.\n\n
 
-Die Mädels und Jungs von Foodsharing Sigmaringen arbeiten ehrenamtlich und möchte auch keine Geldspenden. Es geht hierbei ausschließlich um den nachhaltigen Umgang mit Lebensmitteln.
+Die Mädels und Jungs von Foodsharing Sigmaringen arbeiten ehrenamtlich und möchte auch keine Geldspenden. Es geht hierbei ausschließlich um den nachhaltigen Umgang mit Lebensmitteln.\n\n
 
-Wir von EINE LIEBE unterstützen diese Initiative auf ganzer Länge ❤ Deshalb werdet Ihr bei EINE LIEBE 2019 auch einen #Fairteiler nutzen können, um Lebensmitteln eine zweite Chance zu geben.
+Wir von EINE LIEBE unterstützen diese Initiative auf ganzer Länge ❤ Deshalb werdet Ihr bei EINE LIEBE 2019 auch einen #Fairteiler nutzen können, um Lebensmitteln eine zweite Chance zu geben.\n\n
 
 Foodsharing Sigmaringen freut sich unheimlich darüber, wenn Ihr am #Fairteiler vorbeischaut. Sei es um etwas zu geben, etwas zu nehmen oder einfach zu quatschen.</string>
+
     <string name="dorfladen" >Deine "besten" Freunde haben Dir mal wieder das letzte Dosenbier weggeschnappt? \n\n
 Bis gestern warst Du Vegetarier und hast deshalb zum Grillen nur eine Ananas dabei? \n\n
 Du kannst den fleischigen Gelüsten widerstehen, jedoch ist sämtliches Obst und Gemüse schon weggefuttert? \n\n
@@ -129,5 +130,4 @@ Für die Spontanen unter Euch hat der Dorfladen sowohl am Samstag als auch am So
 Zusätzlich zur Einkaufsmöglichkeit bereiten Euch die Damen und Herren vom Dorfladen am Samstag- und Sonntagmorgen in der Zeit von 09.00 bis 12.00 Uhr beim Einlass zum Camping-Platz ein leckeres Frühstück. Denn ihr wisst ja - ein vollwertiges Frühstück ist unabdingbar für einen gesunden Start in den Tag.\n\n
 
 Das Team des Dorfladens Rokweiler freut sich auf Euch!</string>
-
 </resources>

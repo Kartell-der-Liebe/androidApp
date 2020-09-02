@@ -1,5 +1,6 @@
 package com.example.kartellderliebe.ui.lineUp
 
+import android.graphics.Color
 import android.graphics.Color.BLACK
 import android.graphics.Color.WHITE
 import android.os.Bundle
@@ -50,6 +51,8 @@ class TimeTableFragment : Fragment() {
             stageName.gravity = Gravity.CENTER_HORIZONTAL
             stageName.text = stages.name
             stageName.setPadding(0,50,0,50)
+            stageName.setBackgroundColor(Color.parseColor("#fdea04"))
+            stageName.setTextColor(Color.parseColor("#002c3c"))
             binding.TimeTableLinearLayout.addView(stageName)
 
             val table = TableLayout(context)
@@ -59,7 +62,7 @@ class TimeTableFragment : Fragment() {
 
             val rowTitle = TableRow(context)
             //rowTitle.gravity = Gravity.CENTER_HORIZONTAL
-            rowTitle.setBackgroundColor(BLACK)
+            rowTitle.setBackgroundColor(Color.parseColor("#002c3c"))
 
             for (header in stages.header){
                 val headerText = TextView(context)

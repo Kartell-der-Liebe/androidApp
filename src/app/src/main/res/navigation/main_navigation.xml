@@ -34,7 +34,8 @@
         tools:layout="@layout/fragment_acts_main">
         <action
             android:id="@+id/action_actsMainFragment_to_actsDetailWebView"
-            app:destination="@id/actsDetailWebViewFragment" />
+            app:destination="@id/actsDetailWebViewFragment"
+            app:popUpTo="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/foodMainFragment"

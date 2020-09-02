@@ -1,30 +1,33 @@
 package com.example.kartellderliebe.ui
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.AsyncTask
 import android.os.Bundle
+import android.os.Handler
 import android.view.*
 import android.widget.ProgressBar
-import android.widget.Toolbar
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kartellderliebe.MainActivity
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
 import com.example.kartellderliebe.R
 import com.example.kartellderliebe.databinding.FragmentFestivalNewsBinding
 import com.example.kartellderliebe.rss.`interface`.FeedAdapter
 import com.example.kartellderliebe.rss.common.HTTPDataHandler
-import com.example.kartellderliebe.rss.model.Feed
 import com.example.kartellderliebe.rss.model.RSSObject
 import com.google.gson.Gson
 
-class FestivalNewsFragment : Fragment() {
+class FestivalNewsFragment : Fragment(){
 
-    lateinit var toolbar: androidx.appcompat.widget.Toolbar
+    lateinit var swipeToRefresh : SwipeRefreshLayout
     lateinit var recyclerView: RecyclerView
     lateinit var rssObject: RSSObject
+    lateinit var progressDialog : ProgressBar
 
     val RSS_LINK : String = "https://eineliebe.de/feed/"
     val RSS2JSONAPI : String = " https://api.rss2json.com/v1/api.json?rss_url="
@@ -43,6 +46,12 @@ class FestivalNewsFragment : Fragment() {
         val linearLayoutManager = LinearLayoutManager(context)
         recyclerView.layoutManager = linearLayoutManager
 
+        swipeToRefresh = binding.swiperefresh
+        swipeToRefresh.setOnRefreshListener { loadRSS() }
+        swipeToRefresh.setColorSchemeColors(Color.parseColor("#fdea04"), Color.parseColor("#002c3c"))
+
+
+        progressDialog = binding.progressLoader
         loadRSS()
 
 
@@ -66,7 +75,8 @@ class FestivalNewsFragment : Fragment() {
                     val adapter = context?.let { FeedAdapter(rssObject, it) }
                     recyclerView.adapter = adapter
                     adapter?.notifyDataSetChanged()
-                    binding.newsConnectionFailedTextView.text = ""
+                    progressDialog.visibility = ProgressBar.INVISIBLE
+                    swipeToRefresh.isRefreshing = false
                 }
             }
         }
