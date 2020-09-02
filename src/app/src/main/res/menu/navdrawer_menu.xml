@@ -4,22 +4,22 @@
 
     <item
         android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_refresh"
+        android:icon="@drawable/ic_baseline_home_24"
         android:title="Home" />
     <item
         android:id="@+id/actsMainFragment"
-        android:icon="@drawable/ic_refresh"
+        android:icon="@drawable/ic_baseline_queue_music_24"
         android:title="Line Up" />
     <item
         android:id="@+id/foodMainFragment"
-        android:icon="@drawable/ic_refresh"
+        android:icon="@drawable/ic_baseline_fastfood_24"
         android:title="Food" />
     <item
         android:id="@+id/festivalNewsFragment"
-        android:icon="@drawable/ic_refresh"
+        android:icon="@drawable/ic_baseline_fiber_new_24"
         android:title="Festival News" />
     <item
         android:id="@+id/festivalInfosMainFragment"
-        android:icon="@drawable/ic_refresh"
+        android:icon="@drawable/ic_baseline_info_24"
         android:title="Festival Infos" />
 </menu>
