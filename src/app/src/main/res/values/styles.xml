@@ -13,7 +13,7 @@
     </style>
 
     <style name="AppTheme.NoActionBar.Launcher" parent="AppTheme.NoActionBar">
-        <item name="android:windowBackground">@drawable/herz_navigation</item>
+        <item name="android:windowBackground">@drawable/herz_startscreen</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

@@ -43,19 +43,6 @@
                         android:paddingRight="25dp"
                         android:paddingBottom="0dp" />
 
-                    <TextView
-                        android:id="@+id/textViewDots1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:textColor="@color/EL2020SchriftDunkel"
-                        android:textSize="25dp"
-                        android:layout_marginLeft="180dp"
-                        android:layout_marginRight="180dp"
-                        android:gravity="center"
-                        android:text="..."
-                        android:paddingBottom="0dp" />
-
                     <ImageButton
                         android:id="@+id/expand_collapse1"
                         android:layout_width="wrap_content"
@@ -97,19 +84,6 @@
                         android:paddingRight="25dp"
                         android:paddingBottom="0dp" />
 
-                    <TextView
-                        android:id="@+id/textViewDots2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:textColor="@color/EL2020SchriftDunkel"
-                        android:textSize="25dp"
-                        android:layout_marginLeft="180dp"
-                        android:layout_marginRight="180dp"
-                        android:gravity="center"
-                        android:text="..."
-                        android:paddingBottom="0dp" />
-
                     <ImageButton
                         android:id="@+id/expand_collapse2"
                         android:layout_width="wrap_content"
@@ -149,19 +123,6 @@
                         android:paddingLeft="25dp"
                         android:paddingTop="25dp"
                         android:paddingRight="25dp"
-                        android:paddingBottom="0dp" />
-
-                    <TextView
-                        android:id="@+id/textViewDots3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:textColor="@color/EL2020SchriftDunkel"
-                        android:textSize="25dp"
-                        android:layout_marginLeft="180dp"
-                        android:layout_marginRight="180dp"
-                        android:gravity="center"
-                        android:text="..."
                         android:paddingBottom="0dp" />
 
                     <ImageButton
