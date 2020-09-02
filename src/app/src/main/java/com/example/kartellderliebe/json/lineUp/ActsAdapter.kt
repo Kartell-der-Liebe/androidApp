@@ -52,15 +52,15 @@ class ActsAdapter(
             timeInMillis
             }
             val endMillis: Long = Calendar.getInstance().run {
-                set(2012, 0, 19, 8, 30)
+                set(jsonObject.year.toInt(), 0, 19, jsonObject.acts[position].time.toInt() + (jsonObject.acts[position].duration.toInt() / 60), 30)
                 timeInMillis
             }
             val intent = Intent(Intent.ACTION_INSERT)
                 .setData(CalendarContract.Events.CONTENT_URI)
                 .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startMillis)
                 .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endMillis)
-                .putExtra(CalendarContract.Events.TITLE, "Yoga")
-                .putExtra(CalendarContract.Events.DESCRIPTION, "Group class")
+                .putExtra(CalendarContract.Events.TITLE, jsonObject.acts[position].name)
+                .putExtra(CalendarContract.Events.DESCRIPTION, "Auftitt Act")
                 .putExtra(CalendarContract.Events.EVENT_LOCATION, jsonObject.acts[position].stage)
                 .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.ALLOWED_AVAILABILITY)
                 .putExtra(Intent.EXTRA_EMAIL, "rowan@example.com,trevor@example.com")
