@@ -6,6 +6,7 @@ import android.os.AsyncTask
 import android.os.Bundle
 import android.os.Handler
 import android.view.*
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -26,6 +27,7 @@ class FestivalNewsFragment : Fragment(){
     lateinit var swipeToRefresh : SwipeRefreshLayout
     lateinit var recyclerView: RecyclerView
     lateinit var rssObject: RSSObject
+    lateinit var progressDialog : ProgressBar
 
     val RSS_LINK : String = "https://eineliebe.de/feed/"
     val RSS2JSONAPI : String = " https://api.rss2json.com/v1/api.json?rss_url="
@@ -46,8 +48,10 @@ class FestivalNewsFragment : Fragment(){
 
         swipeToRefresh = binding.swiperefresh
         swipeToRefresh.setOnRefreshListener { loadRSS() }
-        swipeToRefresh.setColorSchemeColors(Color.parseColor("#002c3c"), Color.parseColor("#fdea04"))
+        swipeToRefresh.setColorSchemeColors(Color.parseColor("#fdea04"), Color.parseColor("#002c3c"))
 
+
+        progressDialog = binding.progressLoader
         loadRSS()
 
 
@@ -71,13 +75,14 @@ class FestivalNewsFragment : Fragment(){
                     val adapter = context?.let { FeedAdapter(rssObject, it) }
                     recyclerView.adapter = adapter
                     adapter?.notifyDataSetChanged()
+                    progressDialog.visibility = ProgressBar.INVISIBLE
+                    swipeToRefresh.isRefreshing = false
                 }
             }
         }
         val url_get_data = StringBuilder(RSS2JSONAPI)
         url_get_data.append(RSS_LINK)
         loadRSSAsync.execute(url_get_data.toString())
-        swipeToRefresh.isRefreshing = false
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
